@@ -1,6 +1,6 @@
-# /publish-essay - Publish Essay to your-domain.com
+# /publish-essay - Publish Essay to Your Website
 
-Create MDX file, commit to your-company-hub repo, and trigger Vercel deploy.
+Create MDX file, commit to your content repo, and trigger Vercel deploy.
 
 ## Usage
 
@@ -19,16 +19,16 @@ Create MDX file, commit to your-company-hub repo, and trigger Vercel deploy.
    - Generate slug from title if not provided (kebab-case)
 
 2. **Create MDX File**
-   - Location: `/Users/the userbelaval/Development/your-company-hub/core/content/essays/`
+   - Location: your content directory (e.g., `content/essays/`)
    - Filename: `{slug}.mdx`
    - Add/verify all required frontmatter fields
 
 3. **Git Operations**
    ```bash
-   cd /Users/the userbelaval/Development/your-company-hub
+   cd /path/to/your-content-repo
    git checkout main
    git pull origin main
-   git add core/content/essays/{slug}.mdx
+   git add content/essays/{slug}.mdx
    git commit -m "content: add essay - {title}"
    git push origin main
    ```
@@ -49,7 +49,7 @@ Create MDX file, commit to your-company-hub repo, and trigger Vercel deploy.
 title: "Required - Essay title"
 subtitle: "Optional - Supporting tagline"
 date: "YYYY-MM-DD"              # Required
-author: "the author"          # Optional, defaults to the user
+author: "Your Name"             # Optional
 category: "essay|research|release"  # Required
 tags: ["tag1", "tag2"]           # Optional
 featured: true|false             # Optional
@@ -72,7 +72,7 @@ heroImage: "/path/to/image.webp" # Optional
 title: \"The 70% Problem\"
 subtitle: \"Why AI tools get us most of the way, then leave us stranded\"
 date: \"2025-12-30\"
-author: \"the author\"
+author: \"Your Name\"
 category: \"research\"
 tags: [\"research\", \"ai\", \"productivity\"]
 ---
@@ -88,7 +88,7 @@ I've been tracking something for the past six months...
 ```
 Publishing essay to your-domain.com...
 
-File created: core/content/essays/the-70-percent-problem.mdx
+File created: content/essays/the-70-percent-problem.mdx
 Commit: abc123 "content: add essay - The 70% Problem"
 Deploy triggered on Vercel
 
@@ -109,6 +109,6 @@ Deploy status: Production (ready in ~60 seconds)
 
 ## Requirements
 
-- Git access to your-company-hub repo
+- Git access to your content repo
 - Main branch must be clean (no uncommitted changes)
 - Vercel project linked for deploy status

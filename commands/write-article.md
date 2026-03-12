@@ -1,6 +1,6 @@
 # /write-article - Write & Publish Article
 
-You are helping the user write and publish an article to your-domain.com/writing. **This is a conversational process** — you interview the user about what was built, extract the narrative, write a draft, get approval, then publish.
+You are helping the user write and publish an article to their website. **This is a conversational process** — you interview the user about what was built, extract the narrative, write a draft, get approval, then publish.
 
 ## Arguments
 - **$ARGUMENTS**: Topic or brief description of what to write about (can be rough)
@@ -16,7 +16,7 @@ You are helping the user write and publish an article to your-domain.com/writing
 
 ### Phase 2: Extract the Narrative (conversational)
 
-Walk through these naturally. the user often speaks fast by voice — capture the essence:
+Walk through these naturally. The user often speaks fast by voice — capture the essence:
 
 1. **The trigger:** "What started this? A conversation, a problem, seeing someone else's work?"
 2. **The insight:** "What was the aha moment? What did you realize was missing or possible?"
@@ -24,7 +24,7 @@ Walk through these naturally. the user often speaks fast by voice — capture th
 4. **The surprise:** "What unexpected thing happened during the build? What delighted you?"
 5. **The takeaway:** "What's the lesson for other builders? What would you tell someone starting this?"
 
-**Important:** the user's writing voice is:
+**Important:** The user's writing voice should be configured to match their style. Default voice:
 - First person, casual, builder energy
 - "Ship fast, iterate faster" mentality
 - Credits collaborators generously
@@ -62,10 +62,9 @@ featured: false
 ---
 ```
 
-3. Save to: `/Users/the userbelaval/Development/id8/your-company/content/essays/<slug>.mdx`
+3. Save to your content directory (e.g., `content/essays/<slug>.mdx`)
 4. Unless `--draft` flag was used, commit and push:
-   - `cd /Users/the userbelaval/Development/id8/your-company`
-   - `git add content/essays/<slug>.mdx`
+   - Stage the new file
    - `git commit -m "essay: <title>"`
    - Confirm with the user before pushing to main (auto-deploys to Vercel)
 5. Report the URL: `your-domain.com/writing/<slug>`
@@ -77,13 +76,13 @@ User: /write-article What we just built with the workspace system
 
 Claude: Love it. Let me get the story. What kicked this off — was it a specific moment?
 
-User: Yeah my friend Shah showed me his project structure with templates and generators and I realized I had all this execution power but no input structure
+User: Yeah my friend showed me his project structure with templates and generators and I realized I had all this execution power but no input structure
 
 Claude: That's a great hook. Who else should we credit?
 
-User: Just Shah, he inspired the idea. And the factory.ai team for the design language.
+User: Just him, he inspired the idea. And the design team for the design language.
 
-Claude: [Writes draft with narrative arc: trigger → insight → build → surprise → takeaway]
+Claude: [Writes draft with narrative arc: trigger -> insight -> build -> surprise -> takeaway]
 
 User: This is great but can you add more about the /visualize moment?
 
@@ -95,7 +94,7 @@ Claude: [Creates MDX, commits, confirms push]
 ```
 
 ## Notes
-- Articles go in `/Users/the userbelaval/Development/id8/your-company/content/essays/`
+- Configure the content directory path for your project
 - Format: MDX with YAML frontmatter
 - Slug becomes the URL: `your-domain.com/writing/<slug>`
 - Vercel auto-deploys from main branch

@@ -56,6 +56,6 @@ When the user says "/log-note" or asks to log something:
 3. Add the new entry at the top of staticObservations (after the comment)
 4. Increment all subsequent IDs
 5. Update the migration file if Supabase is configured
-6. Dual-write to JOURNEY.md: Run `~/.your-automation/tools/journey-append.sh --polish "<summary of the note>"` to also append the note to your automation system's journey log. This keeps both the public your-domain.com field notes and the private JOURNEY.md in sync.
+6. (Optional) Dual-write to JOURNEY.md if you have a journey log script configured. This keeps both the public website field notes and the private JOURNEY.md in sync.
 
 Remember: These notes are public. Write with authenticity but awareness that visitors will read them.

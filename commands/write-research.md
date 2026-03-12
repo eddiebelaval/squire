@@ -52,7 +52,7 @@ Research articles are for insights discovered during the building process:
    title: "[Insight-driven title, not topic-driven]"
    subtitle: "[The unexpected conclusion or question]"
    date: "[YYYY-MM-DD]"
-   author: "the author"
+   author: "Your Name"
    category: "research"
    tags: ["research", "{topic}", "{related-concepts}"]
    ---
@@ -123,6 +123,6 @@ Maybe that's the real 30%.
 
 ## Requirements
 
-- the user's voice profile in ~/.claude/CLAUDE.md
+- The user's voice profile in ~/.claude/CLAUDE.md
 - Clear thesis or observation to explore
 - Ideally, some personal experience or data to draw from
