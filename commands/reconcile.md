@@ -1,6 +1,6 @@
-# /reconcile - Reconcile the Triangle (VISION + SPEC + BUILDING)
+# /reconcile - Reconcile the Triad (VISION + SPEC + BUILDING)
 
-You are invoking the **reconcile** skill -- the living document maintenance system for the three-document triangle.
+You are invoking the **reconcile** skill -- the living document maintenance system for the three-document Triad.
 
 Load and follow the skill at: `.claude/skills/reconcile/SKILL.md`
 
@@ -11,7 +11,7 @@ Parse $ARGUMENTS to determine mode:
 - "scan" -> Drift scan only (detect gaps between VISION/SPEC/codebase, report but don't edit)
 - "vision" -> Update VISION.md only (evolution -- what shifted and why)
 - "spec" -> Update SPEC.md only (reconcile with current codebase reality)
-- "init" -> Initialize triangle for a project that doesn't have VISION.md + SPEC.md yet
+- "init" -> Initialize Triad for a project that doesn't have VISION.md + SPEC.md yet
 
 ## Examples
 

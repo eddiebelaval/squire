@@ -1,10 +1,10 @@
 # /reconcile -- Living Document Reconciliation
 
-Maintain the three-document triangle: VISION.md (north star), SPEC.md (contract), BUILDING.md (journal). This skill is **conversational** -- it asks questions, listens, and writes the docs. You talk, Claude writes.
+Maintain the three-document Triad: VISION.md (north star), SPEC.md (contract), BUILDING.md (journal). This skill is **conversational** -- it asks questions, listens, and writes the docs. You talk, Claude writes.
 
 ## Core Philosophy
 
-> The triangle self-corrects through conversation. VISION evolves when you learn something. SPEC evolves when reality changes. BUILDING records what happened. The gap between VISION and SPEC IS the roadmap.
+> The Triad self-corrects through conversation. VISION evolves when you learn something. SPEC evolves when reality changes. BUILDING records what happened. The gap between VISION and SPEC IS the roadmap.
 
 **CRITICAL:** This is an interview, not a form. Use `AskUserQuestion` for structured choices. Use natural conversation for open-ended questions. NEVER hand the user a template with brackets to fill in. Ask, listen, write.
 
@@ -14,17 +14,17 @@ Maintain the three-document triangle: VISION.md (north star), SPEC.md (contract)
 
 1. Identify the project from the current directory.
 2. Resolve the project root (walk up to `.git` or use cwd).
-3. Check which triangle documents exist:
+3. Check which Triad documents exist:
    - `VISION.md` at project root
    - `SPEC.md` at project root
    - `BUILDING.md` at project root
-4. Read all existing triangle documents into context.
+4. Read all existing Triad documents into context.
 5. State: "Reconciling **[PROJECT]** on branch **[BRANCH]**"
 6. If mode is `init` and documents already exist, warn and confirm before overwriting.
 
 ---
 
-## Mode: `init` -- Initialize the Triangle
+## Mode: `init` -- Initialize the Triad
 
 When VISION.md and/or SPEC.md don't exist yet. BUILDING.md is assumed to exist (or will be created separately).
 
@@ -54,7 +54,7 @@ Write the Anti-Vision section.
 
 Write the Edges section.
 
-Create `VISION.md` at the project root. Populate the Evolution Log with a single entry: today's date, "Initial vision captured", "Triangle initialization".
+Create `VISION.md` at the project root. Populate the Evolution Log with a single entry: today's date, "Initial vision captured", "Triad initialization".
 
 ### Phase 2: Reality Scan (for SPEC.md)
 
@@ -82,9 +82,9 @@ If corrections are needed, update and re-present.
 
 Create `SPEC.md` at the project root.
 
-### Phase 3: Triangle Summary
+### Phase 3: Triad Summary
 
-Show the completed triangle:
+Show the completed Triad:
 ```
 VISION: [Soul -- one sentence]
   [N] pillars ([R] realized, [P] partial, [U] unrealized)
@@ -250,7 +250,7 @@ Run all modes in sequence:
 1. **Scan** -- detect all drift
 2. **SPEC reconcile** -- update contract to match codebase
 3. **VISION interview** -- ask what shifted in understanding
-4. Present final triangle summary
+4. Present final Triad summary
 
 This is the "quarterly checkup" mode. Use it before major releases, after pivots, or when things feel off.
 
@@ -275,7 +275,7 @@ This is the "quarterly checkup" mode. Use it before major releases, after pivots
 
 | Situation | Command | What Happens |
 |-----------|---------|-------------|
-| New project needs the triangle | `/reconcile init` | Soul interview + codebase scan |
+| New project needs the Triad | `/reconcile init` | Soul interview + codebase scan |
 | Something shipped | `/reconcile spec` | Scan code, update contract |
 | I learned something about the product | `/reconcile vision` | Conversational interview, update north star |
 | Things feel off / pre-release | `/reconcile scan` | Drift report, no edits |

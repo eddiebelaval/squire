@@ -1,8 +1,8 @@
 # Squire
 
-An agent operating system for AI-assisted development. Battle-tested behavioral rules, stage-gate pipelines, multi-model orchestration, and reusable thinking frameworks -- all derived from hundreds of real sessions, thousands of messages, and hundreds of commits.
+The most complete Claude Code toolkit in the wild. Battle-tested behavioral rules, 56 slash commands, 318 skills, 23 custom agents, stage-gate pipelines, multi-model orchestration, and reusable thinking frameworks -- all derived from 1,075 sessions and 3,667 commits across 5 months of intensive AI-augmented development.
 
-**335 sessions taught us how AI agents fail. This is the operating system that prevents it.**
+**3,667 commits taught us how AI agents fail. This is the operating system that prevents it.**
 
 ---
 
@@ -14,18 +14,19 @@ It's not a product. It's an operating system -- a set of files you drop into you
 
 **What you get:**
 
-| Component | What It Does |
-|-----------|-------------|
-| [`squire.md`](squire.md) | The flagship. A complete behavioral ruleset for AI agents -- drop it into your project root or `~/.claude/CLAUDE.md` |
-| [Pipeline](pipeline/) | 11-stage build system with gate questions, agent-native additions, and branch hygiene |
-| [Patterns](patterns/) | Battle-tested behavioral rules and multi-model orchestration (Director/Builder) |
-| [Prompts](prompts/) | 6 thinking frameworks for code review, debugging, security, performance, testing, and ship readiness |
-| [Commands](commands/) | Claude Code slash commands: `/visualize`, `/blueprint`, `/integration-audit`, `/reconcile` |
-| [Skills](skills/) | Claude Code skills: `/audit`, `/reconcile` |
-| [Templates](templates/) | Living documentation system: VISION.md + SPEC.md (The Triangle) |
-| [Doc Templates](doc-templates/) | Feature specs, ADRs, deployment checklists, implementation plans |
-| [Workspace](workspace/) | File-based project organization with generator scripts for tasks, bugs, features, and ADRs |
-| [BUILDING-SETUP.md](BUILDING-SETUP.md) | Self-installing build journal -- drop into any project, it sets itself up and maintains itself |
+| Component | Count | What It Does |
+|-----------|-------|-------------|
+| [`squire.md`](squire.md) | 1 | The flagship. A complete behavioral ruleset for AI agents -- drop it into your project root or `~/.claude/CLAUDE.md` |
+| [Commands](commands/) | 56 | Claude Code slash commands: `/ship`, `/deploy`, `/research`, `/visualize`, `/blueprint`, `/fix`, `/test`, and 50 more |
+| [Skills](skills/) | 318 | Specialized skills across engineering, marketing, finance, AI/ML, design, and operations |
+| [Agents](agents/) | 23 | Custom agents with tool access for architecture, security, DevOps, and more |
+| [Pipeline](pipeline/) | 11 stages | Stage-gate build system with gate questions, agent-native additions, and branch hygiene |
+| [Patterns](patterns/) | 7 | Battle-tested behavioral rules and multi-model orchestration (Director/Builder) |
+| [Prompts](prompts/) | 6 | Thinking frameworks for code review, debugging, security, performance, testing, and ship readiness |
+| [Templates](templates/) | 3 | The Triad: VISION.md + SPEC.md + BUILDING.md -- self-correcting product documentation |
+| [Doc Templates](doc-templates/) | 6 | Feature specs, ADRs, deployment checklists, implementation plans |
+| [Workspace](workspace/) | 6 generators | File-based project organization with generator scripts for tasks, bugs, features, and ADRs |
+| [BUILDING-SETUP.md](BUILDING-SETUP.md) | 1 | Self-installing build journal -- drop into any project, it sets itself up and maintains itself |
 
 ---
 
@@ -96,29 +97,35 @@ Full descriptions with friction patterns: [`patterns/behavioral-rules.md`](patte
 
 ---
 
-## The Triangle -- Living Product Documentation
+## The Triad -- Living Product Documentation
 
-A three-document system that replaces your dead PRD:
+A three-document system that replaces your dead PRD. Three documents that stay in sync because they reference each other. Any two can reconstruct the third.
 
 ```
         VISION.md
-       (FUTURE)
-        /    \
-       /      \
-      /  THE   \
-     /  WORK    \
-    /            \
+        (FUTURE)
+         /    \
+        /      \
+       / THE    \
+      / WORK     \
+     /            \
 SPEC.md -------- BUILDING.md
-(PRESENT)         (PAST)
+(PRESENT)          (PAST)
 ```
 
-- **VISION.md** -- Where it's going (the evolving north star)
-- **SPEC.md** -- Where it is right now (the testable contract)
-- **BUILDING.md** -- How it got here (the build journal)
+- **VISION.md** -- Where it's going. Soul, pillars (REALIZED/PARTIAL/UNREALIZED), anti-vision, edges.
+- **SPEC.md** -- Where it is right now. Testable contract with drift detection (CURRENT/DRIFTED/STALE).
+- **BUILDING.md** -- How it got here. Self-installing, auto-updating build journal with check-in interviews.
 
-**The gap between VISION and SPEC IS the roadmap.** No separate roadmap document needed. Any two documents can reconstruct the third.
+**The gap between VISION and SPEC IS the roadmap.** No separate roadmap document. The unrealized pillars are what you build next. The delta between "what we want" and "what we have" tells you everything.
 
-Use `/reconcile` to maintain the triangle conversationally -- it interviews you and writes the docs.
+**Self-correcting:** When one document drifts, the others expose it. SPEC says "supports real-time" but VISION never mentioned it? Either VISION needs updating or the feature is scope creep.
+
+**Self-installing:** Drop `BUILDING-SETUP.md` into any project root. It explores your codebase, interviews you about the origin story, generates a personalized BUILDING.md, then deletes itself.
+
+Use `/reconcile` to maintain the Triad conversationally -- it detects drift, interviews you about what changed, and updates all three documents.
+
+Full guide: [`templates/TRIAD.md`](templates/TRIAD.md)
 
 ---
 
@@ -172,21 +179,113 @@ Reusable prompt templates for common tasks:
 
 ---
 
-## Slash Commands
+## Slash Commands (55+)
+
+### Development Workflow
+
+| Command | What It Does |
+|---------|-------------|
+| `/ship` | Full delivery pipeline: preflight checks, commit, push, PR, merge |
+| `/fix` | Systematic bug diagnosis and root-cause debugging |
+| `/test` | Browser-based feature testing with Playwright |
+| `/test-verify` | Auto-detect project type and run appropriate tests |
+| `/deploy` | Production deployment with preflight, smoke tests, and rollback |
+| `/deploy-watch` | Monitor deployment status until live |
+| `/start` | Begin new feature with branch creation and planning |
+| `/release` | Promote dev to main with preflight checks and merge verification |
+| `/rollback` | Safe undo of recent changes with soft/hard options |
+| `/cleanup` | Code cleanup workflow (dead code, organization, security) |
+| `/preview` | Pre-commit review with quality checks and risk assessment |
+| `/mobile-check` | Comprehensive mobile viewport testing |
+
+### Architecture & Analysis
 
 | Command | What It Does |
 |---------|-------------|
 | `/visualize` | Interactive HTML visualizations of architecture, workflows, codebases |
 | `/blueprint` | Persistent build plans with progress tracking and parallel batches |
+| `/codebase-map` | Interactive architecture visualization with protocol completion tracking |
 | `/integration-audit` | Full-stack feature audit across all layers (DB, API, auth, types, UI) |
+| `/explain` | Plain-English code/concept explanation for any audience |
+| `/compare` | Change visualization and impact assessment |
+| `/dev-assess` | 3-expert technical assessment with triangulation |
+| `/adr` | Architecture Decision Record creation with conversational interview |
+
+### Planning & Ideas
+
+| Command | What It Does |
+|---------|-------------|
+| `/feature-dev` | Complete feature development workshop (discovery, planning, build) |
+| `/idea` | Feature brainstorming with approach exploration and feasibility |
+| `/task` | Quick task creation with conversational details capture |
+| `/prep` | Research and investigation document creation |
 | `/reconcile` | Living document maintenance -- conversational drift detection |
 
-## Skills
+### Content & Distribution
 
-| Skill | What It Does |
-|-------|-------------|
-| `/audit` | Read-only codebase health audit (security, dead code, wiring gaps, type safety) |
-| `/reconcile` | 5-mode document reconciliation for the Triangle system |
+| Command | What It Does |
+|---------|-------------|
+| `/research` | Research orchestrator with queue, branch, and compound operations |
+| `/distro` | Marketing/distribution pipeline (7 stages) |
+| `/publish` | 6-agent editorial pipeline for content publishing |
+| `/write-article` | Write and publish articles with voice profile |
+| `/write-research` | Generate research articles |
+| `/post-linkedin` | LinkedIn content publishing with voice adaptation |
+| `/announce-release` | Full release announcement pipeline |
+
+### Operations
+
+| Command | What It Does |
+|---------|-------------|
+| `/morning` | Daily standup brief across all active projects |
+| `/status` | Quick project status check |
+| `/save-state` | Checkpoint current work state |
+| `/resume` | Resume from a saved checkpoint |
+| `/review-codex` | Review and resolve multi-model builder work |
+
+## Skills (287)
+
+Specialized skills organized by domain:
+
+| Category | Count | Examples |
+|----------|-------|---------|
+| Frontend | 32 | ui-builder, nextjs-project-manager, layout-designer, expo-deployment |
+| Backend | 19 | senior-backend, database-design, supabase-expert, api-design |
+| Architecture & DevOps | 12 | senior-architect, senior-devops, cto-advisor, ci-cd-pipeline-builder |
+| Code Quality | 10 | code-reviewer, testing-qa, test-generator, git-workflow-designer |
+| AI & Automation | 15 | prompt-engineer, rag-pipeline-builder, agent-orchestrator, chain-builder |
+| SEO | 6 | seo-analyst, seo-audit, programmatic-seo, schema-markup |
+| CRO | 10 | form-cro, page-cro, signup-flow-cro, ab-test-designer |
+| Content & Social | 20 | copywriting, blog-post-writer, social-content, newsletter-writer |
+| Marketing Strategy | 9 | launch-strategy, growth-hacker, competitive-intelligence, gtm-strategist |
+| Financial | 12 | cash-flow-forecaster, runway-calculator, revenue-modeler, budget-planner |
+| Startup & Fundraising | 10 | pitch-deck-creator, fundraising-strategist, cap-table-manager |
+| Operations | 8 | compliance-checker, contract-analyzer, vendor-manager |
+| Product Management | 12 | mvp-planner, pmf-analyzer, user-research, roadmap-builder |
+| Design | 10 | wireframe-creator, mockup-generator, brand-identity-builder |
+| UX | 6 | onboarding-designer, chatbot-designer, faq-builder |
+| Writing | 15 | technical-writer, white-paper-author, case-study-writer, grant-writer |
+| Communication | 8 | email-composer, presentation-maker, slide-deck-designer |
+| Browser Automation | 3 | browser-use, omni-vu, automation-architect |
+
+## Agents (30+)
+
+Custom agents with tool access -- not static prompts, but executable specialists:
+
+| Agent | Specialty |
+|-------|-----------|
+| nextjs-senior-dev | Next.js 14+ App Router, performance, complex patterns |
+| backend-architect | RESTful APIs, microservice boundaries, database schemas |
+| operations-manager | Project coordination, quality control, process optimization |
+| payment-security-specialist | Payment flow security, PCI compliance |
+| stripe-integration-specialist | Stripe billing, subscriptions, webhooks |
+| database-migration-specialist | Schema migrations, zero-downtime changes |
+| mcp-server-architect | MCP server design and implementation |
+| social-media-manager | Cross-platform content, engagement optimization |
+| market-intelligence-analyst | Market research, trend analysis, competitor intelligence |
+| text-editor-architect | Rich text editor design and implementation |
+| steve-jobs-advisor | Product vision, design philosophy, strategic clarity |
+| *...and 20+ more* | Security, DevOps, testing, email, relationships |
 
 ---
 
@@ -251,9 +350,30 @@ All HTML visualizations follow the **Factory-inspired** design language:
 
 ## Origin
 
-This toolkit was built by [Eddie Belaval](https://x.com/eddiebe) at [id8Labs](https://id8labs.app) while shipping multiple AI-augmented products with Claude Code. Every rule, pattern, and template came from real friction -- sessions where something went wrong, and the fix was documented so it wouldn't happen again.
+This toolkit was built by [Eddie Belaval](https://x.com/eddiebe) at [id8Labs](https://id8labs.app) while shipping 12+ AI-augmented products with Claude Code over 5 months. Every rule, pattern, and template came from real friction -- sessions where something went wrong, and the fix was documented so it wouldn't happen again.
 
-The behavioral rules are backed by data: 335 sessions, 2,210 messages, 261 commits analyzed across a month of intensive development. The top 9 friction patterns became the 9 rules. The pipeline came from shipping 6 products through the same stage-gate system. The thinking frameworks came from doing the same types of reviews repeatedly and wanting consistency.
+### The Numbers
+
+| Metric | Count |
+|--------|-------|
+| Sessions | 1,075 |
+| Commits | 3,667 |
+| Products shipped | 12+ |
+| Skills built | 318 |
+| Slash commands | 56 |
+| Custom agents | 23 |
+| Duration | 5 months (Oct 2025 - Mar 2026) |
+
+```
+Oct 2025:  ████████████████░░░░░░░░░░░░░░   364 commits  (ramp-up)
+Nov 2025:  ███████████░░░░░░░░░░░░░░░░░░░   269 commits  (learning)
+Dec 2025:  █████████░░░░░░░░░░░░░░░░░░░░░   215 commits  (holidays)
+Jan 2026:  ██████████████████████████████░   916 commits  (ignition)
+Feb 2026:  ████████████████████████████████ 1,215 commits (peak)
+Mar 2026:  █████████████████████░░░░░░░░░░   487 commits  (12 days in)
+```
+
+The behavioral rules are backed by data: the top friction patterns across those sessions became the 9 rules. The pipeline came from shipping 12 products through the same stage-gate system. The thinking frameworks came from doing the same types of reviews repeatedly and wanting consistency.
 
 If this helps you build better with AI, that's the goal.
 
