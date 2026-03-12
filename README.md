@@ -1,8 +1,8 @@
 # Squire
 
-The most complete Claude Code toolkit in the wild. Battle-tested behavioral rules, 56 slash commands, 318 skills, 23 custom agents, stage-gate pipelines, multi-model orchestration, and reusable thinking frameworks -- all derived from 1,075 sessions and 3,667 commits across 5 months of intensive AI-augmented development.
+The most complete Claude Code toolkit in the wild. Battle-tested behavioral rules, 63 slash commands, 315 skills, 34 custom agents, stage-gate pipelines, multi-model orchestration, and reusable thinking frameworks -- all derived from 2,990 sessions and 3,307 commits across 5 months of intensive AI-augmented development.
 
-**3,667 commits taught us how AI agents fail. This is the operating system that prevents it.**
+**3,307 commits taught us how AI agents fail. This is the operating system that prevents it.**
 
 ---
 
@@ -17,9 +17,9 @@ It's not a product. It's an operating system -- a set of files you drop into you
 | Component | Count | What It Does |
 |-----------|-------|-------------|
 | [`squire.md`](squire.md) | 1 | The flagship. A complete behavioral ruleset for AI agents -- drop it into your project root or `~/.claude/CLAUDE.md` |
-| [Commands](commands/) | 56 | Claude Code slash commands: `/ship`, `/deploy`, `/research`, `/visualize`, `/blueprint`, `/fix`, `/test`, and 50 more |
-| [Skills](skills/) | 318 | Specialized skills across engineering, marketing, finance, AI/ML, design, and operations |
-| [Agents](agents/) | 23 | Custom agents with tool access for architecture, security, DevOps, and more |
+| [Commands](commands/) | 63 | Claude Code slash commands: `/ship`, `/deploy`, `/research`, `/visualize`, `/blueprint`, `/fix`, `/test`, and 56 more |
+| [Skills](skills/) | 315 | Specialized skills across engineering, marketing, finance, AI/ML, design, and operations |
+| [Agents](agents/) | 34 | Custom agents with tool access for architecture, security, DevOps, and more |
 | [Pipeline](pipeline/) | 11 stages | Stage-gate build system with gate questions, agent-native additions, and branch hygiene |
 | [Patterns](patterns/) | 7 | Battle-tested behavioral rules and multi-model orchestration (Director/Builder) |
 | [Prompts](prompts/) | 6 | Thinking frameworks for code review, debugging, security, performance, testing, and ship readiness |
@@ -179,7 +179,7 @@ Reusable prompt templates for common tasks:
 
 ---
 
-## Slash Commands (55+)
+## Slash Commands (63)
 
 ### Development Workflow
 
@@ -243,7 +243,7 @@ Reusable prompt templates for common tasks:
 | `/resume` | Resume from a saved checkpoint |
 | `/review-codex` | Review and resolve multi-model builder work |
 
-## Skills (287)
+## Skills (315)
 
 Specialized skills organized by domain:
 
@@ -268,7 +268,7 @@ Specialized skills organized by domain:
 | Communication | 8 | email-composer, presentation-maker, slide-deck-designer |
 | Browser Automation | 3 | browser-use, omni-vu, automation-architect |
 
-## Agents (30+)
+## Agents (34)
 
 Custom agents with tool access -- not static prompts, but executable specialists:
 
@@ -356,12 +356,12 @@ This toolkit was built by [Eddie Belaval](https://x.com/eddiebe) at [id8Labs](ht
 
 | Metric | Count |
 |--------|-------|
-| Sessions | 1,075 |
-| Commits | 3,667 |
+| Sessions | 2,990 |
+| Commits | 3,307 |
 | Products shipped | 12+ |
-| Skills built | 318 |
-| Slash commands | 56 |
-| Custom agents | 23 |
+| Skills built | 315 |
+| Slash commands | 63 |
+| Custom agents | 34 |
 | Duration | 5 months (Oct 2025 - Mar 2026) |
 
 ```
