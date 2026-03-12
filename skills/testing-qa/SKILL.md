@@ -1,9 +1,29 @@
 ---
 name: testing-qa
 description: Expert guide for testing Next.js applications with Playwright, Jest, and React Testing Library. Use when writing tests, debugging test failures, or setting up test infrastructure.
----
+slug: testing-qa
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "testing-qa"
+  - "testing qa"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Testing & QA Skill
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## Overview
 

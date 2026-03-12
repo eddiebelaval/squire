@@ -10,9 +10,29 @@ license: MIT
 metadata:
   author: vercel
   version: '1.0.0'
----
+slug: vercel-composition-patterns
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "vercel-composition-patterns"
+  - "vercel composition patterns"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # React Composition Patterns
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 Composition patterns for building flexible, maintainable React components. Avoid
 boolean prop proliferation by using compound components, lifting state, and

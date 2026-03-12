@@ -1,9 +1,29 @@
 ---
 name: defuddle
 description: Extract clean markdown content from web pages using Defuddle CLI, removing clutter and navigation to save tokens. Use instead of WebFetch when the user provides a URL to read or analyze, for online documentation, articles, blog posts, or any standard web page.
----
+slug: defuddle
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "defuddle"
+  - "defuddle"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Defuddle
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 Use Defuddle CLI to extract clean readable content from web pages. Prefer over WebFetch for standard web pages — it removes navigation, ads, and clutter, reducing token usage.
 

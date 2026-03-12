@@ -1,6 +1,6 @@
-# /publish-essay - Publish Essay to Your Website
+# /publish-essay - Publish Essay to id8labs.app
 
-Create MDX file, commit to your content repo, and trigger Vercel deploy.
+Create MDX file, commit to id8labs-hub repo, and trigger Vercel deploy.
 
 ## Usage
 
@@ -19,16 +19,16 @@ Create MDX file, commit to your content repo, and trigger Vercel deploy.
    - Generate slug from title if not provided (kebab-case)
 
 2. **Create MDX File**
-   - Location: your content directory (e.g., `content/essays/`)
+   - Location: `/Users/eddiebelaval/Development/id8labs-hub/core/content/essays/`
    - Filename: `{slug}.mdx`
    - Add/verify all required frontmatter fields
 
 3. **Git Operations**
    ```bash
-   cd /path/to/your-content-repo
+   cd /Users/eddiebelaval/Development/id8labs-hub
    git checkout main
    git pull origin main
-   git add content/essays/{slug}.mdx
+   git add core/content/essays/{slug}.mdx
    git commit -m "content: add essay - {title}"
    git push origin main
    ```
@@ -39,7 +39,7 @@ Create MDX file, commit to your content repo, and trigger Vercel deploy.
    - Wait for production deploy completion
 
 5. **Return Essay URL**
-   - Format: `https://your-domain.com/essays/{slug}`
+   - Format: `https://id8labs.app/essays/{slug}`
    - Verify URL is accessible (may take 1-2 minutes)
 
 ## MDX Frontmatter Reference
@@ -49,7 +49,7 @@ Create MDX file, commit to your content repo, and trigger Vercel deploy.
 title: "Required - Essay title"
 subtitle: "Optional - Supporting tagline"
 date: "YYYY-MM-DD"              # Required
-author: "Your Name"             # Optional
+author: "Eddie Belaval"          # Optional, defaults to Eddie
 category: "essay|research|release"  # Required
 tags: ["tag1", "tag2"]           # Optional
 featured: true|false             # Optional
@@ -72,7 +72,7 @@ heroImage: "/path/to/image.webp" # Optional
 title: \"The 70% Problem\"
 subtitle: \"Why AI tools get us most of the way, then leave us stranded\"
 date: \"2025-12-30\"
-author: \"Your Name\"
+author: \"Eddie Belaval\"
 category: \"research\"
 tags: [\"research\", \"ai\", \"productivity\"]
 ---
@@ -86,13 +86,13 @@ I've been tracking something for the past six months...
 ## Output
 
 ```
-Publishing essay to your-domain.com...
+Publishing essay to id8labs.app...
 
-File created: content/essays/the-70-percent-problem.mdx
+File created: core/content/essays/the-70-percent-problem.mdx
 Commit: abc123 "content: add essay - The 70% Problem"
 Deploy triggered on Vercel
 
-Essay URL: https://your-domain.com/essays/the-70-percent-problem
+Essay URL: https://id8labs.app/essays/the-70-percent-problem
 
 Deploy status: Production (ready in ~60 seconds)
 ```
@@ -109,6 +109,6 @@ Deploy status: Production (ready in ~60 seconds)
 
 ## Requirements
 
-- Git access to your content repo
+- Git access to id8labs-hub repo
 - Main branch must be clean (no uncommitted changes)
 - Vercel project linked for deploy status

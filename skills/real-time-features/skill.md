@@ -1,9 +1,29 @@
 ---
 name: real-time-features
 description: Expert guide for real-time features using Supabase Realtime, WebSockets, live updates, presence, and collaborative features. Use when building chat, live updates, or collaborative apps.
----
+slug: real-time-features
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "real-time-features"
+  - "real time features"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Real-Time Features Skill
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## Overview
 

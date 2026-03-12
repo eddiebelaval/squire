@@ -1,9 +1,29 @@
 ---
 name: docker-composer
 description: Expert guide for creating Docker Compose configurations, Dockerfiles, and container orchestration. Use when containerizing applications, setting up development environments, or configuring multi-container deployments.
----
+slug: docker-composer
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "docker-composer"
+  - "docker composer"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Docker Composer Skill
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## Overview
 

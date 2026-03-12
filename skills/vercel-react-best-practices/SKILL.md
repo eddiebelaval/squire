@@ -5,9 +5,29 @@ license: MIT
 metadata:
   author: vercel
   version: "1.0.0"
----
+slug: vercel-react-best-practices
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "vercel-react-best-practices"
+  - "vercel react best practices"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Vercel React Best Practices
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 Comprehensive performance optimization guide for React and Next.js applications, maintained by Vercel. Contains 57 rules across 8 categories, prioritized by impact to guide automated refactoring and code generation.
 

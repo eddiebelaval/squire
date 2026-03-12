@@ -1,7 +1,17 @@
 ---
 name: seo-audit
 description: When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions "SEO audit," "technical SEO," "why am I not ranking," "SEO issues," "on-page SEO," "meta tags review," or "SEO health check." For building pages at scale to target keywords, see programmatic-seo. For adding structured data, see schema-markup.
----
+slug: seo-audit
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "seo-audit"
+  - "seo audit"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # SEO Audit
 
@@ -27,6 +37,16 @@ Before auditing, understand:
    - Access to Search Console / analytics?
 
 ---
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## Audit Framework
 

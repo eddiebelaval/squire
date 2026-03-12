@@ -1,7 +1,17 @@
 ---
 name: onboarding-cro
 description: When the user wants to optimize post-signup onboarding, user activation, first-run experience, or time-to-value. Also use when the user mentions "onboarding flow," "activation rate," "user activation," "first-run experience," "empty states," "onboarding checklist," "aha moment," or "new user experience." For signup/registration optimization, see signup-flow-cro. For ongoing email sequences, see email-sequence.
----
+slug: onboarding-cro
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "onboarding-cro"
+  - "onboarding cro"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Onboarding CRO
 
@@ -27,6 +37,16 @@ Before providing recommendations, understand:
    - Where do users currently drop off?
 
 ---
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## Core Principles
 

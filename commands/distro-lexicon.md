@@ -267,7 +267,7 @@ Try it free at [link].
 ```
 Show HN: [Product Name] – [factual description of what it does]
 ```
-Example: "Show HN: MyApp – AI mediation for couples in conflict"
+Example: "Show HN: Parallax – AI mediation for couples in conflict"
 
 **Launch Post (Article):**
 ```
@@ -322,9 +322,9 @@ Example: "Building a real-time AI mediator with Claude and WebSockets"
 |-----------|---------|-------------|
 | **Curiosity gap** | "The one thing couples get wrong about arguments" | Newsletter, nurture |
 | **Direct benefit** | "Resolve your next argument in 10 minutes" | Launch, conversion |
-| **Personal** | "Hey — I built something for you" | Founder email, onboarding |
+| **Personal** | "Eddie here — I built something for you" | Founder email, onboarding |
 | **Urgency** | "Last day: 50% off Pro (ends midnight)" | Promotions, limited offers |
-| **Social proof** | "Why 500 couples switched to our product" | Conversion, retention |
+| **Social proof** | "Why 500 couples switched to Parallax" | Conversion, retention |
 
 ### Rules
 
@@ -505,15 +505,15 @@ Use these frameworks when generating copy assets. Each framework works best in s
 ```
 Problem:  "Every argument with your partner feels like it could be the last one."
 Agitate:  "And therapists cost $200/hour with month-long waitlists."
-Solve:    "[Your product] gives you an AI mediator in 30 seconds, for $9/month."
+Solve:    "Parallax gives you an AI mediator in 30 seconds, for $9/month."
 ```
 
 ### AIDA (Attention → Interest → Desire → Action)
 **Best for:** Landing pages, longer ads, email sequences
 ```
 Attention: "What if your next argument actually brought you closer?"
-Interest:  "[Your product] uses AI trained on thousands of conflict resolution patterns..."
-Desire:    "Couples who use [your product] report resolving conflicts 3x faster..."
+Interest:  "Parallax uses AI trained on thousands of conflict resolution patterns..."
+Desire:    "Couples who use Parallax report resolving conflicts 3x faster..."
 Action:    "Start your free session now."
 ```
 
@@ -522,7 +522,7 @@ Action:    "Start your free session now."
 ```
 Before: "We were fighting every night about money."
 After:  "Now we have a weekly money conversation that actually works."
-Bridge: "[Your product] helped us find a script that defused the tension."
+Bridge: "Parallax helped us find a script that defused the tension."
 ```
 
 ### 4U (Useful → Urgent → Unique → Ultra-specific)

@@ -1,7 +1,17 @@
 ---
 name: page-cro
 description: When the user wants to optimize, improve, or increase conversions on any marketing page — including homepage, landing pages, pricing pages, feature pages, or blog posts. Also use when the user says "CRO," "conversion rate optimization," "this page isn't converting," "improve conversions," or "why isn't this page working." For signup/registration flows, see signup-flow-cro. For post-signup activation, see onboarding-cro. For forms outside of signup, see form-cro. For popups/modals, see popup-cro.
----
+slug: page-cro
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "page-cro"
+  - "page cro"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Page Conversion Rate Optimization (CRO)
 
@@ -161,6 +171,16 @@ Hypotheses worth A/B testing rather than assuming.
 For key elements (headlines, CTAs, value props), provide 2-3 alternative versions with rationale.
 
 ---
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## Page-Specific Frameworks
 

@@ -1,6 +1,6 @@
-# /post-linkedin - Post to LinkedIn for your company
+# /post-linkedin - Post to LinkedIn for ID8Labs
 
-Post content to the user's LinkedIn profile using Playwright browser automation.
+Post content to Eddie's LinkedIn profile using Playwright browser automation.
 
 ## Usage
 
@@ -28,7 +28,7 @@ Post content to the user's LinkedIn profile using Playwright browser automation.
 
 3. **Pre-Flight Check**
    - Verify Comet browser is running with debugging
-   - Confirm logged into LinkedIn as the author
+   - Confirm logged into LinkedIn as Eddie Belaval
    - Display content for confirmation
 
 4. **Post via Playwright**
@@ -57,7 +57,7 @@ Post content to the user's LinkedIn profile using Playwright browser automation.
 
 ## Voice Adaptation for LinkedIn
 
-The user's voice on LinkedIn is:
+Eddie's voice on LinkedIn is:
 - Still authentic and personal
 - More polished, less parenthetical
 - Professional credibility woven in
@@ -65,8 +65,8 @@ The user's voice on LinkedIn is:
 - Community-building language
 
 **Transform:**
-- Casual interjections → [omit or professional equivalent]
-- Slang/informal phrases → Professional phrasing
+- "(Loud ape sounds)" → [omit or professional equivalent]
+- "jacked to the tits" → "deeply excited about"
 - Short punchy lines → Developed paragraphs
 
 ## Example: From Essay to LinkedIn
@@ -88,7 +88,7 @@ The user's voice on LinkedIn is:
 ## Posting Flow
 
 ```
-/post-linkedin --from-essay https://your-domain.com/essays/the-70-percent-problem
+/post-linkedin --from-essay https://id8labs.app/essays/the-70-percent-problem
 ```
 
 **Output:**
@@ -116,11 +116,11 @@ Ready to post? [Proceed with Playwright]
 Add to first comment (not in post):
 - #AItools (specific)
 - #ProductBuilding (industry)
-- #BuildingInPublic (personal brand)
-- #YourCompany (company)
+- #EddieBuildingInPublic (personal brand)
+- #ID8Labs (company)
 
 ## Requirements
 
 - Comet browser running with remote debugging
-- Logged into LinkedIn as the author
+- Logged into LinkedIn as Eddie Belaval
 - Playwright MCP connected

@@ -1,7 +1,17 @@
 ---
 name: free-tool-strategy
 description: When the user wants to plan, evaluate, or build a free tool for marketing purposes — lead generation, SEO value, or brand awareness. Also use when the user mentions "engineering as marketing," "free tool," "marketing tool," "calculator," "generator," "interactive tool," "lead gen tool," "build a tool for leads," or "free resource." This skill bridges engineering and marketing — useful for founders and technical marketers.
----
+slug: free-tool-strategy
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "free-tool-strategy"
+  - "free tool strategy"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Free Tool Strategy (Engineering as Marketing)
 
@@ -475,6 +485,16 @@ Payback period: Build cost / (Monthly value - Monthly maintenance)
 
 ```
 # Free Tool Strategy: [Tool Name]
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## Concept
 [What it does in one paragraph]

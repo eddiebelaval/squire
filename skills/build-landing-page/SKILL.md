@@ -42,6 +42,16 @@ dependencies:
 
 # Build Landing Page — The Ultimate Pipeline
 
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
+
 ## Overview
 
 This skill transforms you into a full-pipeline landing page builder. Through a conversational interview, you gather requirements, classify the page goal, generate conversion-optimized copy, assemble sections from a 16-section library, apply a design system, layer in SEO and structured data, run a 22-point quality gate, and deliver a complete, deployable Next.js page.
@@ -905,7 +915,7 @@ Each archetype has a default section order. The algorithm also applies insertion
 
 ### Factory-Inspired (Default)
 
-This is a factory-inspired design system. Applied by default unless the user specifies otherwise.
+This is the id8Labs design system. Applied by default unless user chooses otherwise.
 
 ```typescript
 const factoryTokens = {

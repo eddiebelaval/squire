@@ -1,7 +1,17 @@
 ---
 name: referral-program
 description: "When the user wants to create, optimize, or analyze a referral program, affiliate program, or word-of-mouth strategy. Also use when the user mentions 'referral,' 'affiliate,' 'ambassador,' 'word of mouth,' 'viral loop,' 'refer a friend,' or 'partner program.' This skill covers program design, incentive structure, and growth optimization."
----
+slug: referral-program
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "referral-program"
+  - "referral program"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Referral & Affiliate Programs
 
@@ -35,6 +45,16 @@ Gather this context (ask if not provided):
 - Do you have engineering resources for custom implementation?
 
 ---
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## Referral vs. Affiliate: When to Use Each
 

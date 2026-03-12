@@ -221,8 +221,8 @@ Before starting, gather context:
    - Customize per-channel formatting
    - Include direct links to the asset files
 
-4. **Create automated jobs for posting** (if user wants automation):
-   - Draft the posting schedule as cron-compatible jobs
+4. **Create HYDRA jobs for automated posting** (if user wants automation):
+   - Draft the posting schedule as HYDRA-compatible jobs
    - Include review step before auto-posting goes live
 
 5. Write output to `workspace/distro/launch-sequence.md`
@@ -250,7 +250,7 @@ Before starting, gather context:
    - User feedback → testimonial post
    - Feature update → announcement + tutorial
 
-3. **Set up automation** (if user approves):
+3. **Set up HYDRA automation** (if user approves):
    - Content generation jobs (weekly batch of posts)
    - Posting schedule (buffer posts for consistent output)
    - Engagement monitoring (flag high-engagement posts for amplification)
@@ -407,9 +407,9 @@ When invoked with `--measure`:
 - Build pipeline's Stage 9 checklist should include "Distro pipeline initiated"
 - Feature updates (Stage 11: Listen & Iterate) trigger new distro assets
 
-### With Automation Systems
-- Stage 5 can generate job definitions for automated posting
-- Stage 6 sustain mode can be powered by cron jobs or scheduled tasks
+### With HYDRA
+- Stage 5 can generate HYDRA job definitions for automated posting
+- Stage 6 sustain mode can be powered by HYDRA cron jobs
 - Monitoring jobs can feed into Stage 7 metrics
 
 ### With Workspace System

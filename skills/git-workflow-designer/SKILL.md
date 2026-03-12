@@ -1,9 +1,29 @@
 ---
 name: git-workflow-designer
 description: Expert guide for designing Git branching strategies including Git Flow, GitHub Flow, trunk-based development, and release management. Use when establishing team workflows or improving version control practices.
----
+slug: git-workflow-designer
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "git-workflow-designer"
+  - "git workflow designer"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Git Workflow Designer Skill
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## Overview
 

@@ -1,9 +1,29 @@
 ---
 name: audit
 description: Run a structured, read-only codebase audit using parallel agents. Surfaces dead code, security gaps, wiring issues, type safety problems, and UI shells. Produces a prioritized fix plan. Use for ship-readiness checks, pre-launch reviews, or periodic hygiene sweeps.
----
+slug: audit
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "audit"
+  - "audit"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # /audit - Codebase Audit
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 Run a comprehensive, **read-only** audit of the target codebase. Do NOT make any changes — only read, search, and report.
 

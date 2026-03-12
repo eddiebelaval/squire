@@ -1,9 +1,53 @@
 ---
-name: supabase-expert
+name: Supabase Expert
+slug: supabase-expert
 description: Expert guide for Supabase integration - database schemas, RLS policies, auth, Edge Functions, and real-time subscriptions. Use when working with Supabase backend features.
+category: backend
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "supabase"
+  - "supabase expert"
+  - "rls policy"
+  - "edge function"
+  - "realtime subscription"
+  - "database schema"
+tags:
+  - supabase
+  - database
+  - backend
+  - rls
+  - auth
 ---
 
 # Supabase Integration Expert Skill
+
+## Core Workflows
+
+### Workflow 1: Database Schema Design
+1. Design table structure with standard fields (uuid, timestamps, user_id)
+2. Define foreign keys and relations
+3. Create indexes for frequently queried columns
+4. Generate TypeScript types from schema
+
+### Workflow 2: Row Level Security
+1. Enable RLS on all tables with user data
+2. Apply appropriate policy patterns (owner-only, role-based, shared access)
+3. Test policies thoroughly
+4. Debug with policy inspection queries
+
+### Workflow 3: Authentication Setup
+1. Configure auth provider (Email OTP, OAuth)
+2. Set up client and server Supabase clients
+3. Implement auth middleware for protected routes
+4. Handle auth callbacks
+
+### Workflow 4: Real-time Features
+1. Subscribe to postgres_changes on target tables
+2. Filter by user or record
+3. Handle payload in client state
+4. Clean up subscriptions on unmount
 
 ## Overview
 

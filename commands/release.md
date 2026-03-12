@@ -132,4 +132,7 @@ When $ARGUMENTS contains "hotfix":
 
 ## Project-Specific Notes
 
-Add project-specific release notes here as needed (e.g., deployment targets, required env vars, migration steps).
+For Parallax (tryparallax.space):
+- main deploys to Vercel production automatically
+- Pre-build script requires SUPABASE env vars (skip build check locally, trust tsc)
+- Check for Supabase migration files — these need to be run separately

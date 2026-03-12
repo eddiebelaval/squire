@@ -1,6 +1,6 @@
 # /write-research - Generate Research Article Essay
 
-Generate a research article in the user's voice for your-domain.com's Research category.
+Generate a research article in Eddie's voice for id8labs.app's Research category.
 
 ## Usage
 
@@ -27,7 +27,7 @@ Research articles are for insights discovered during the building process:
    - Identify 3-5 key insights or data points
    - Find the deeper pattern (the "why behind the why")
 
-2. **Apply the user's Voice Profile**
+2. **Apply Eddie's Voice Profile**
 
    Reference `~/.claude/CLAUDE.md`:
 
@@ -52,7 +52,7 @@ Research articles are for insights discovered during the building process:
    title: "[Insight-driven title, not topic-driven]"
    subtitle: "[The unexpected conclusion or question]"
    date: "[YYYY-MM-DD]"
-   author: "Your Name"
+   author: "Eddie Belaval"
    category: "research"
    tags: ["research", "{topic}", "{related-concepts}"]
    ---
@@ -88,7 +88,7 @@ For `/write-research "The 70% problem in AI tooling"`:
 title: "The 70% Problem"
 subtitle: "Why AI tools get us most of the way, then leave us stranded"
 date: "2025-12-30"
-author: "the author"
+author: "Eddie Belaval"
 category: "research"
 tags: ["research", "ai", "productivity", "claude-code"]
 ---
@@ -123,6 +123,6 @@ Maybe that's the real 30%.
 
 ## Requirements
 
-- The user's voice profile in ~/.claude/CLAUDE.md
+- Eddie's voice profile in ~/.claude/CLAUDE.md
 - Clear thesis or observation to explore
 - Ideally, some personal experience or data to draw from

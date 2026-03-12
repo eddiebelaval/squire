@@ -1,7 +1,17 @@
 ---
 name: landing-page-designer
 description: Senior landing page designer specializing in high-converting pages for SaaS, apps, and services. Use when building landing pages, hero sections, pricing pages, or any conversion-focused marketing page. Always researches current best practices via Perplexity before designing. Includes AI slop detection and cleaning.
----
+slug: landing-page-designer
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "landing-page-designer"
+  - "landing page designer"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Landing Page Senior Designer Skill
 
@@ -14,6 +24,16 @@ This skill transforms you into a senior landing page designer who combines conve
 2. ALWAYS run output through the AI Slop Detector before delivery
 
 ---
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## AI SLOP DETECTOR & CLEANER
 

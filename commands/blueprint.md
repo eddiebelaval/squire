@@ -12,7 +12,7 @@ Generate a persistent, interactive HTML build plan that serves as the master blu
 
 ### Phase 1: Conversational Intake (Structured Interview)
 
-This is a multi-round structured interview. Use AskUserQuestion aggressively to nail down specifics. The user may speak by voice — capture the essence, then confirm with structured questions. **Do NOT skip to HTML generation until every round is complete.**
+This is a multi-round structured interview. Use AskUserQuestion aggressively to nail down specifics. Eddie often speaks by voice — capture the essence, then confirm with structured questions. **Do NOT skip to HTML generation until every round is complete.**
 
 **IMPORTANT:** Actually explore the codebase between questions. Read files, check the database schema, look at existing patterns. The blueprint should be grounded in reality, not assumptions. Use what you find to inform better questions.
 
@@ -66,7 +66,75 @@ Use AskUserQuestion: "Ready to generate the blueprint?" (options: Yes, generate 
 
 ### Phase 2: Generate the Blueprint HTML
 
-Create a self-contained HTML file following the Factory-Inspired design system (same as `/visualize`). The blueprint has these mandatory tabs:
+Create a self-contained HTML file following the Factory-Inspired design system (same as `/visualize`).
+
+#### Embedded Data Model (MANDATORY)
+
+Every blueprint MUST embed its structured data as a JSON block. This is the **single source of truth** —
+the HTML renders FROM this data, and `--update` reads it back without parsing HTML.
+
+```html
+<!-- Place just before closing </body> tag -->
+<script type="application/json" id="blueprint-data">
+{
+  "project": "pause-sync",
+  "title": "Pause Sync Build Plan",
+  "generated": "2026-02-10T03:00:00Z",
+  "scale": "feature-set",
+  "stack": ["Next.js 16", "Supabase", "Claude Sonnet", "Deepgram"],
+  "phases": [
+    {
+      "id": "p1",
+      "name": "Core Setup",
+      "status": "not_started",
+      "deps": [],
+      "sequential": [
+        { "id": "p1-t1", "title": "Create split-screen layout", "done": false }
+      ],
+      "batches": []
+    },
+    {
+      "id": "p2",
+      "name": "Audio Pipeline",
+      "status": "not_started",
+      "deps": ["p1"],
+      "sequential": [],
+      "batches": [
+        {
+          "id": "p2-ba",
+          "label": "Batch A",
+          "tasks": [
+            { "id": "p2-t1", "title": "Mic capture component", "done": false },
+            { "id": "p2-t2", "title": "Audio level indicator", "done": false }
+          ]
+        },
+        {
+          "id": "p2-bb",
+          "label": "Batch B",
+          "tasks": [
+            { "id": "p2-t3", "title": "Deepgram WebSocket client", "done": false }
+          ]
+        }
+      ]
+    }
+  ],
+  "assessment": {
+    "strengths": ["..."],
+    "risks": [{ "id": "risk-1", "title": "...", "severity": "HIGH" }],
+    "optimizations": [{ "id": "opt-1", "title": "...", "impact": "..." }]
+  }
+}
+</script>
+```
+
+**Rules:**
+- The JSON drives everything: progress bars, phase status badges, Parallel Map SVG, and checkbox state
+- On page load, read both `blueprint-data` JSON and localStorage (checkbox state) — merge them
+- When Claude reads a blueprint back (for `--update`), parse THIS JSON, not the HTML
+- `phases[].deps` array enables the auto-layout algorithm in the Parallel Map tab
+- Each task `id` must match the `data-key` on its corresponding checkbox for localStorage sync
+
+The blueprint has these mandatory tabs:
 
 ---
 
@@ -217,6 +285,117 @@ Use SVG for the dependency graph with:
 - Node sizing based on estimated complexity
 - Hover to highlight all dependencies of a task
 
+**Auto-Layout Algorithm (MANDATORY — do not manually position nodes):**
+
+The Parallel Map SVG MUST be rendered by JavaScript from the `blueprint-data` JSON.
+Claude provides the data, the browser renders the layout. This keeps diagrams consistent
+and makes `--update` trivial.
+
+```javascript
+function renderParallelMap(data) {
+  var phases = data.phases;
+  var COL_WIDTH = 180;
+  var ROW_HEIGHT = 56;
+  var PHASE_GAP = 80;
+  var BATCH_GAP = 20;
+  var y = 40;
+
+  phases.forEach(function(phase, pi) {
+    // Phase header node
+    drawPhaseNode(phase, 20, y);
+    var phaseStartY = y;
+    y += ROW_HEIGHT;
+
+    // Sequential tasks: single column
+    phase.sequential.forEach(function(task) {
+      drawTaskNode(task, 40, y, COL_WIDTH, phase.id);
+      y += ROW_HEIGHT;
+    });
+
+    // Parallel batches: side-by-side columns
+    if (phase.batches.length > 0) {
+      var batchStartY = y;
+      var maxBatchHeight = 0;
+      phase.batches.forEach(function(batch, bi) {
+        var bx = 40 + bi * (COL_WIDTH + BATCH_GAP);
+        var by = batchStartY;
+        drawBatchLabel(batch, bx, by);
+        by += 24;
+        batch.tasks.forEach(function(task) {
+          drawTaskNode(task, bx, by, COL_WIDTH, phase.id);
+          by += ROW_HEIGHT;
+        });
+        maxBatchHeight = Math.max(maxBatchHeight, by - batchStartY);
+      });
+      y = batchStartY + maxBatchHeight;
+
+      // Sync point line
+      if (pi < phases.length - 1) {
+        drawSyncPoint(y);
+        y += 32;
+      }
+    }
+
+    // Draw dependency edges from previous phases
+    phase.deps.forEach(function(depId) {
+      drawDependencyEdge(depId, phase.id);
+    });
+
+    y += PHASE_GAP;
+  });
+
+  // Set SVG viewBox to fit content
+  svg.setAttribute('viewBox', '0 0 ' + calcWidth(phases) + ' ' + y);
+}
+
+// Call on page load
+var data = JSON.parse(document.getElementById('blueprint-data').textContent);
+renderParallelMap(data);
+```
+
+**Hover-to-Trace Dependencies (MANDATORY):**
+
+When hovering any task node, highlight its entire dependency chain and dim everything else.
+This answers "what does this task need?" and "what does it unlock?" at a glance.
+
+```javascript
+function setupHoverTrace(svg) {
+  svg.querySelectorAll('.task-node').forEach(function(node) {
+    node.addEventListener('mouseenter', function() {
+      var taskId = this.dataset.taskId;
+      var phaseId = this.dataset.phaseId;
+      // Dim all nodes to 20% opacity
+      svg.querySelectorAll('.task-node, .phase-node').forEach(function(n) {
+        n.style.opacity = '0.2';
+        n.style.transition = 'opacity 0.2s ease';
+      });
+      // Highlight this node
+      this.style.opacity = '1';
+      // Highlight upstream (amber) — walk deps backwards
+      highlightUpstream(phaseId, '--amber');
+      // Highlight downstream (teal) — walk deps forwards
+      highlightDownstream(phaseId, '--teal');
+      // Highlight dependency edges
+      svg.querySelectorAll('.dep-edge[data-to="' + phaseId + '"]').forEach(function(e) {
+        e.style.stroke = 'var(--amber)';
+        e.style.opacity = '1';
+      });
+      svg.querySelectorAll('.dep-edge[data-from="' + phaseId + '"]').forEach(function(e) {
+        e.style.stroke = 'var(--teal)';
+        e.style.opacity = '1';
+      });
+    });
+    node.addEventListener('mouseleave', function() {
+      // Restore all nodes
+      svg.querySelectorAll('.task-node, .phase-node, .dep-edge').forEach(function(n) {
+        n.style.opacity = '';
+        n.style.stroke = '';
+      });
+    });
+  });
+}
+```
+
 This tab answers: "What's the critical path?" and "Where can we throw more agents at it?"
 
 ---
@@ -237,19 +416,35 @@ Senior Dev Assessment of the PLAN (not the code — the plan itself):
 **ALWAYS save to the artifacts directory:** `~/Development/artifacts/<project>/<name>-blueprint.html`
 
 Use the project subfolder routing (same as `/visualize`):
-- Each project gets its own subfolder: `~/Development/artifacts/<project-name>/`
-- General / cross-project: `~/Development/artifacts/_general/`
-- Create the subfolder with `mkdir -p` if it doesn't exist
+- Homer: `~/Development/artifacts/homer/`
+- DeepStack: `~/Development/artifacts/deepstack/`
+- HYDRA: `~/Development/artifacts/hydra/`
+- Pause: `~/Development/artifacts/pause/`
+- id8labs: `~/Development/artifacts/id8labs/`
+- General: `~/Development/artifacts/_general/`
 
 Open automatically with `open <filepath>`.
 
 ### Phase 4: Update Flow (--update flag)
 
-When invoked with `--update`, read the existing blueprint HTML, parse the current state, and regenerate with:
-- New phases/tasks added from recent work
-- Completed items preserved (read from the HTML structure, not just localStorage)
-- Progress recalculated
-- Assessment updated based on current codebase state
+When invoked with `--update`:
+
+1. **Read the existing blueprint HTML file**
+2. **Parse the `<script id="blueprint-data">` JSON block** — this is the source of truth, NOT the HTML structure
+3. **Merge updates into the JSON:**
+   - Add new phases/tasks discovered from recent work
+   - Preserve `done: true` on completed tasks (from the JSON, not localStorage)
+   - Update phase status badges based on task completion
+   - Recalculate progress percentages
+4. **Re-explore the codebase** — check if files mentioned in prompts have changed, verify assumptions still hold
+5. **Regenerate the full HTML** from the updated JSON, including:
+   - Updated Parallel Map SVG (auto-layout recalculates from new data)
+   - Refreshed Assessment tab based on current codebase state
+   - All existing prompts preserved unless the underlying task changed
+6. **Write the updated JSON back** into the new HTML's `<script id="blueprint-data">` block
+
+**The JSON is the contract.** Old HTML with the same JSON produces the same blueprint.
+Changed JSON produces an updated blueprint. This makes updates deterministic.
 
 ---
 
@@ -425,11 +620,11 @@ Use the exact same Factory-Inspired design system as `/visualize`. All CSS token
 ## Usage Examples
 
 ```
-/blueprint MyApp V2 — full rebuild with new dashboard
-/blueprint Trading Bot — go from paper to real money
-/blueprint Chat Feature — the real-time messaging build plan
-/blueprint --update myapp-v2  (update existing blueprint with new progress)
-/blueprint --from-plan docs/FEATURE_SPEC.md  (seed from existing spec)
+/blueprint Homer V2 — full rebuild with new dashboard
+/blueprint DeepStack live trading — go from paper to real money
+/blueprint Pause Sync — the hackathon build plan
+/blueprint --update homer-v2  (update existing blueprint with new progress)
+/blueprint --from-plan docs/PAUSE_SYNC_SPEC.md  (seed from existing spec)
 ```
 
 ## Notes
@@ -440,4 +635,4 @@ Use the exact same Factory-Inspired design system as `/visualize`. All CSS token
 - Parallel batches should be genuinely independent — if there's any shared state, make them sequential.
 - Include the project path in EVERY prompt. A fresh session has no context about where files live.
 - The Parallel Map tab is the most valuable planning tool — it shows the critical path and parallelization opportunities at a glance.
-- When the user says "what's next?" — open the blueprint, look at the first unchecked task, copy the prompt.
+- When Eddie says "what's next?" — open the blueprint, look at the first unchecked task, copy the prompt.

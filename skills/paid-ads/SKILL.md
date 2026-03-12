@@ -1,7 +1,17 @@
 ---
 name: paid-ads
 description: "When the user wants help with paid advertising campaigns on Google Ads, Meta (Facebook/Instagram), LinkedIn, Twitter/X, or other ad platforms. Also use when the user mentions 'PPC,' 'paid media,' 'ad copy,' 'ad creative,' 'ROAS,' 'CPA,' 'ad campaign,' 'retargeting,' or 'audience targeting.' This skill covers campaign strategy, ad creation, audience targeting, and optimization."
----
+slug: paid-ads
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "paid-ads"
+  - "paid ads"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Paid Ads
 
@@ -36,6 +46,16 @@ Gather this context (ask if not provided):
 - Any existing creative assets?
 
 ---
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## Platform Selection Guide
 

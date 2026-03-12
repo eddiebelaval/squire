@@ -1,7 +1,17 @@
 ---
 name: schema-markup
 description: When the user wants to add, fix, or optimize schema markup and structured data on their site. Also use when the user mentions "schema markup," "structured data," "JSON-LD," "rich snippets," "schema.org," "FAQ schema," "product schema," "review schema," or "breadcrumb schema." For broader SEO issues, see seo-audit.
----
+slug: schema-markup
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "schema-markup"
+  - "schema markup"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Schema Markup
 
@@ -26,6 +36,16 @@ Before implementing schema, understand:
    - What's the business value?
 
 ---
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## Core Principles
 

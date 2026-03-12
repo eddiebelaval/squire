@@ -9,9 +9,29 @@ license: MIT
 metadata:
   author: vercel
   version: '1.0.0'
----
+slug: vercel-react-native-skills
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "vercel-react-native-skills"
+  - "vercel react native skills"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # React Native Skills
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 Comprehensive best practices for React Native and Expo applications. Contains
 rules across multiple categories covering performance, animations, UI patterns,

@@ -1,9 +1,29 @@
 ---
 name: config-manager
 description: Expert guide for managing application configuration including environment variables, config files, secrets management, and multi-environment setups. Use when handling .env files, config validation, or configuration architecture.
----
+slug: config-manager
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "config-manager"
+  - "config manager"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Configuration Manager Skill
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## Overview
 

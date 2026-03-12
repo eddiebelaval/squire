@@ -1,7 +1,17 @@
 ---
 name: marketing-psychology
 description: "When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when the user mentions 'psychology,' 'mental models,' 'cognitive bias,' 'persuasion,' 'behavioral science,' 'why people buy,' 'decision-making,' or 'consumer behavior.' This skill provides 70+ mental models organized for marketing application."
----
+slug: marketing-psychology
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "marketing-psychology"
+  - "marketing psychology"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Marketing Psychology & Mental Models
 
@@ -17,6 +27,16 @@ Mental models are thinking tools that help you make better decisions, understand
 4. Suggest how to implement ethically
 
 ---
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## Foundational Thinking Models
 

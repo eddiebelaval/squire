@@ -1,7 +1,17 @@
 ---
 name: copywriting
 description: When the user wants to write, rewrite, or improve marketing copy for any page — including homepage, landing pages, pricing pages, feature pages, about pages, or product pages. Also use when the user says "write copy for," "improve this copy," "rewrite this page," "marketing copy," "headline help," or "CTA copy." For email copy, see email-sequence. For popup copy, see popup-cro.
----
+slug: copywriting
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "copywriting"
+  - "copywriting"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Copywriting
 
@@ -35,6 +45,16 @@ Gather this context (ask if not provided):
 - What messaging are they seeing before this page?
 
 ---
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## Copywriting Principles
 

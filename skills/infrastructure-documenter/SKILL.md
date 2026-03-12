@@ -1,9 +1,29 @@
 ---
 name: infrastructure-documenter
 description: Expert guide for documenting infrastructure including architecture diagrams, runbooks, system documentation, and operational procedures. Use when creating technical documentation for systems and deployments.
----
+slug: infrastructure-documenter
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "infrastructure-documenter"
+  - "infrastructure documenter"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Infrastructure Documenter Skill
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## Overview
 

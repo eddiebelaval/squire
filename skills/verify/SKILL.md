@@ -1,12 +1,45 @@
-# /verify - Unified Verification Skill
+---
+name: Verify
+slug: verify
+description: Unified verification — chains static analysis, tests, and visual checks
+category: testing
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "verify"
+  - "verify this"
+  - "run verification"
+  - "check everything"
+  - "preflight check"
+tags:
+  - verification
+  - testing
+  - quality
+  - preflight
+---
+
+# Verify — Unified Verification Skill
 
 A comprehensive verification skill that chains static analysis, tests, and visual verification. Inspired by Boris Cherny's "verify-app" subagent pattern.
 
-## Trigger
-- `/verify` - Run full verification suite
-- `/verify quick` - Static analysis only
-- `/verify visual` - Browser-based visual verification
-- `/verify [component]` - Verify specific component/feature
+## Core Workflows
+
+### Workflow 1: Full Verification
+1. Run static analysis (TypeScript, ESLint, Prettier)
+2. Run unit tests
+3. Run E2E tests (if available)
+4. Visual verification via browser (if applicable)
+5. Report pass/fail with details
+
+## Quick Reference
+
+| Action | Command |
+|--------|---------|
+| Full verification | `/verify` |
+| Static only | `/verify quick` |
+| Visual check | `/verify visual` |
+| Specific target | `/verify [component]` |
 
 ## Philosophy
 

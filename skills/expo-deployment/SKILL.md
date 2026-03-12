@@ -26,6 +26,16 @@ tags:
 
 # Expo Deployment
 
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
+
 This skill covers deploying Expo applications across all platforms using EAS (Expo Application Services).
 
 ## References

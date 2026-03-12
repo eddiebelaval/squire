@@ -1,7 +1,17 @@
 ---
 name: email-sequence
 description: When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program. Also use when the user mentions "email sequence," "drip campaign," "nurture sequence," "onboarding emails," "welcome sequence," "re-engagement emails," "email automation," or "lifecycle emails." For in-app onboarding, see onboarding-cro.
----
+slug: email-sequence
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "email-sequence"
+  - "email sequence"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Email Sequence Design
 
@@ -33,6 +43,16 @@ Before creating a sequence, understand:
    - What defines success?
 
 ---
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## Core Principles
 

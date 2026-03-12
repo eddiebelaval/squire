@@ -458,7 +458,7 @@ Process --governs--> Component
 await memory.create_entities({
   entities: [
     {
-      name: "my-app",
+      name: "id8labs-app",
       entityType: "Project",
       observations: [
         "Next.js 14+ application",
@@ -484,7 +484,7 @@ await memory.create_entities({
 await memory.create_relations({
   relations: [
     {
-      from: "my-app",
+      from: "id8labs-app",
       to: "authentication-module",
       relationType: "contains"
     },

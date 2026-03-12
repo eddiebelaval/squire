@@ -1,9 +1,29 @@
 ---
 name: deployment-automation
 description: Expert guide for deploying Next.js apps to Vercel, managing environments, CI/CD pipelines, and production best practices. Use when deploying, setting up automation, or managing production.
----
+slug: deployment-automation
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "deployment-automation"
+  - "deployment automation"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Deployment Automation Skill
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## Overview
 

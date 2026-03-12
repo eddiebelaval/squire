@@ -1,6 +1,6 @@
 # /write-release - Generate Release Announcement Essay
 
-Generate a release announcement essay in the user's voice for your website.
+Generate a release announcement essay in Eddie's voice for id8labs.app.
 
 ## Usage
 
@@ -18,7 +18,7 @@ Generate a release announcement essay in the user's voice for your website.
    - Check for existing release notes or changelog
    - Identify the "why" behind the release (not just "what")
 
-2. **Apply the user's Voice Profile**
+2. **Apply Eddie's Voice Profile**
 
    Reference `~/.claude/CLAUDE.md` for voice guidelines:
 
@@ -44,7 +44,7 @@ Generate a release announcement essay in the user's voice for your website.
    title: "[Compelling title - not just version number]"
    subtitle: "[Supporting tagline that expands on value]"
    date: "[YYYY-MM-DD]"
-   author: "Your Name"
+   author: "Eddie Belaval"
    category: "release"
    tags: ["release", "v{version}", "{product}"]
    featured: true
@@ -78,9 +78,9 @@ For `/write-release v1.2.0 "New signal-based dashboard"`:
 ```markdown
 ---
 title: "Building the Dashboard I Needed"
-subtitle: "v1.2.0 brings signal-based metrics to your company"
+subtitle: "v1.2.0 brings signal-based metrics to ID8Labs"
 date: "2025-12-30"
-author: "the author"
+author: "Eddie Belaval"
 category: "release"
 tags: ["release", "v1.2.0", "milo", "dashboard"]
 featured: true
@@ -94,7 +94,7 @@ Last month I found myself refreshing analytics at 2am, looking for... something.
 
 Here's the thing about metrics...
 
-[Content continues in the user's voice - 800-1500 words]
+[Content continues in Eddie's voice - 800-1500 words]
 
 ...
 
@@ -117,5 +117,5 @@ I love each and every one of you.
 
 ## Requirements
 
-- The user's voice profile in ~/.claude/CLAUDE.md
+- Eddie's voice profile in ~/.claude/CLAUDE.md
 - Context about what was shipped (version, features, or git history)

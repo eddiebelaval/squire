@@ -1,9 +1,29 @@
 ---
 name: senior-backend
 description: Comprehensive backend development skill for building scalable backend systems using NodeJS, Express, Go, Python, Postgres, GraphQL, REST APIs. Includes API scaffolding, database optimization, security implementation, and performance tuning. Use when designing APIs, optimizing database queries, implementing business logic, handling authentication/authorization, or reviewing backend code.
----
+slug: senior-backend
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "senior-backend"
+  - "senior backend"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Senior Backend
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 Complete toolkit for senior backend with modern tools and best practices.
 

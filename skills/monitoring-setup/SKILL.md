@@ -1,9 +1,29 @@
 ---
 name: monitoring-setup
 description: Expert guide for setting up monitoring dashboards, alerting, metrics collection, and observability. Use when implementing application monitoring, setting up alerts, or building dashboards.
----
+slug: monitoring-setup
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "monitoring-setup"
+  - "monitoring setup"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Monitoring Setup Skill
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## Overview
 

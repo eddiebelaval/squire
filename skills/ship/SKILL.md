@@ -1,6 +1,38 @@
+---
+name: Ship
+slug: ship
+description: Full delivery pipeline — preflight, commit, push, PR, merge in one command
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "ship"
+  - "ship it"
+  - "push and merge"
+  - "create pr and merge"
+  - "deliver this"
+tags:
+  - delivery
+  - git
+  - pipeline
+  - operations
+---
+
 # Ship — Full Delivery Pipeline
 
 Stage, commit, push, PR, merge, and verify — end-to-end shipping in one command. Respects all CLAUDE.md rules (preflight, no squash, regular merges, branch protection).
+
+## Core Workflows
+
+### Workflow 1: Full Ship (Default)
+1. Detect context (project, branch, base)
+2. Run preflight checks (typecheck, build, lint, tests)
+3. Stage and commit changes
+4. Push to remote
+5. Create PR
+6. Merge (regular merge, no squash)
+7. Verify merge succeeded
 
 ## Usage
 

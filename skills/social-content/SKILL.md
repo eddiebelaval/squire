@@ -1,7 +1,17 @@
 ---
 name: social-content
 description: "When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram, TikTok, Facebook, or other platforms. Also use when the user mentions 'LinkedIn post,' 'Twitter thread,' 'social media,' 'content calendar,' 'social scheduling,' 'engagement,' or 'viral content.' This skill covers content creation, repurposing, and platform-specific strategies."
----
+slug: social-content
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "social-content"
+  - "social content"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Social Content
 
@@ -34,6 +44,16 @@ Gather this context (ask if not provided):
 - Do you have customer stories or data to share?
 
 ---
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## Platform Strategy Guide
 

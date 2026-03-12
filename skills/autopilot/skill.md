@@ -1,4 +1,30 @@
+---
+name: Autopilot
+slug: autopilot
+description: Execute a feature from description to committed code using three parallel sub-agents: Architect, Builder, and Validator.
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "autopilot"
+  - "autopilot"
+tags:
+  - operations
+  - tool-factory-retrofitted
+---
+
 # Autopilot — Autonomous Parallel Build Pipeline
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 Execute a feature from description to committed code using three parallel sub-agents: Architect, Builder, and Validator. No approval pauses — full autonomous execution.
 

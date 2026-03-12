@@ -1,9 +1,29 @@
 ---
 name: senior-devops
 description: Comprehensive DevOps skill for CI/CD, infrastructure automation, containerization, and cloud platforms (AWS, GCP, Azure). Includes pipeline setup, infrastructure as code, deployment automation, and monitoring. Use when setting up pipelines, deploying applications, managing infrastructure, implementing monitoring, or optimizing deployment processes.
----
+slug: senior-devops
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "senior-devops"
+  - "senior devops"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Senior Devops
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 Complete toolkit for senior devops with modern tools and best practices.
 

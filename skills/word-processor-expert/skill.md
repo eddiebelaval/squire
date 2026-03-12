@@ -1,9 +1,29 @@
 ---
 name: word-processor-expert
 description: Expert guide for building professional word processors with Tiptap/ProseMirror. Use for text editor features, document formatting, export functionality, and achieving Word/Pages/Docs feature parity.
----
+slug: word-processor-expert
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "word-processor-expert"
+  - "word processor expert"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Word Processor Expert Skill
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## Overview
 

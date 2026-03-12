@@ -1,7 +1,17 @@
 ---
 name: copy-editing
 description: "When the user wants to edit, review, or improve existing marketing copy. Also use when the user mentions 'edit this copy,' 'review my copy,' 'copy feedback,' 'proofread,' 'polish this,' 'make this better,' or 'copy sweep.' This skill provides a systematic approach to editing marketing copy through multiple focused passes."
----
+slug: copy-editing
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "copy-editing"
+  - "copy editing"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Copy Editing
 
@@ -18,6 +28,16 @@ Good copy editing isn't about rewriting—it's about enhancing. Each pass focuse
 - Preserve the author's voice while improving clarity
 
 ---
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## The Seven Sweeps Framework
 

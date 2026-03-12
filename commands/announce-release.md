@@ -16,7 +16,7 @@ Orchestrates the complete release announcement: essay generation, website publis
 ```
 ┌─────────────────────────────────────┐
 │  /write-release OR /write-research  │
-│  Apply the user's voice profile      │
+│  Apply Eddie's voice profile         │
 │  Generate full MDX content           │
 └─────────────────────────────────────┘
                   ↓
@@ -28,7 +28,7 @@ Orchestrates the complete release announcement: essay generation, website publis
 ```
 ┌─────────────────────────────────────┐
 │        /publish-essay                │
-│  Create MDX file in content repo     │
+│  Create MDX file in id8labs-hub      │
 │  Git commit and push                 │
 │  Trigger Vercel deploy               │
 └─────────────────────────────────────┘
@@ -43,13 +43,13 @@ Orchestrates the complete release announcement: essay generation, website publis
 │  /post-tweet (X/Twitter)             │
 │  Generate thread from essay          │
 │  Optimize with x-viral-optimizer     │
-│  Post to @your-handle                │
+│  Post to @id8labs                    │
 └─────────────────────────────────────┘
                   ↓
 ┌─────────────────────────────────────┐
 │  /post-linkedin                      │
 │  Adapt essay for LinkedIn format     │
-│  Post to the user's profile          │
+│  Post to Eddie's profile             │
 │  Add hashtags in comment             │
 └─────────────────────────────────────┘
 ```
@@ -82,7 +82,7 @@ Orchestrates the complete release announcement: essay generation, website publis
 
    **For LinkedIn:**
    - Adapt full essay to LinkedIn format
-   - Adjust tone (professional voice)
+   - Adjust tone (professional Eddie)
    - Add line breaks and structure
 
 5. **Post to Social**
@@ -93,10 +93,10 @@ Orchestrates the complete release announcement: essay generation, website publis
 
 6. **Summary Report**
    ```
-   Release Announcement Complete
+   ✅ Release Announcement Complete
 
-   Essay: https://your-domain.com/essays/{slug}
-   X: https://x.com/your-handle/status/{id}
+   Essay: https://id8labs.app/essays/{slug}
+   X: https://x.com/id8labs/status/{id}
    LinkedIn: https://linkedin.com/posts/{id}
 
    Next: Monitor engagement after 1 hour
@@ -110,11 +110,11 @@ User: /announce-release v1.2.0 "New signal-based dashboard with real-time metric
 Claude: Starting release announcement pipeline...
 
 [Stage 1: Content Generation]
-Generating essay with the user's voice...
+Generating essay with Eddie's voice...
 
 ---
 Title: "Building the Dashboard I Needed"
-Subtitle: "v1.2.0 brings signal-based metrics to your company"
+Subtitle: "v1.2.0 brings signal-based metrics to ID8Labs"
 Category: release
 ---
 
@@ -128,12 +128,12 @@ User: y
 
 [Stage 2: Website Publishing]
 Creating MDX file: building-the-dashboard-i-needed.mdx
-Committing to content repo...
+Committing to id8labs-hub...
 Pushing to main...
 Deploy triggered on Vercel...
-Waiting for production deploy...
+Waiting for production deploy... ✅
 
-Essay live at: https://your-domain.com/essays/building-the-dashboard-i-needed
+Essay live at: https://id8labs.app/essays/building-the-dashboard-i-needed
 
 [Stage 3: Social Distribution]
 
@@ -144,13 +144,13 @@ Thread 1/3: I'll be honest — I've been staring at dashboards my whole career. 
 Thread 2/3: So we built something different. Signal-based. Focused. Actually useful.
 
 Thread 3/3: v1.2.0 is live. Come see what dashboards should have been.
-https://your-domain.com/essays/building-the-dashboard-i-needed
+https://id8labs.app/essays/building-the-dashboard-i-needed
 ---
 Viral Score: 78/100
 
 Post to X? (y/n)
 User: y
-Posted! https://x.com/your-handle/status/123456789
+Posted! https://x.com/id8labs/status/123456789
 
 LinkedIn Preview:
 ---
@@ -160,27 +160,27 @@ I've spent 15 years staring at dashboards...
 
 Post to LinkedIn? (y/n)
 User: y
-Posted! https://linkedin.com/posts/your-profile/123456
+Posted! https://linkedin.com/posts/eddiebelaval/123456
 
-Release Announcement Complete!
+✅ Release Announcement Complete!
 ```
 
-## Build Pipeline Integration
+## ID8Pipeline Integration
 
-This skill implements **Stage 10.5: ANNOUNCE** in the build pipeline.
+This skill implements **Stage 10.5: ANNOUNCE** in the ID8Pipeline.
 
 After Stage 10 (Ship), the announce stage ensures:
 - Release is documented on the website
 - Community is informed via social
-- Content is created in the user's voice
+- Content is created in Eddie's voice
 - Distribution is consistent and tracked
 
 ## Checkpoint
 
 "Is the release announced on website and social?"
-- Essay published at your-domain.com/essays/{slug}
-- X thread posted from @your-handle
-- LinkedIn post from the user's profile
+- Essay published at id8labs.app/essays/{slug}
+- X thread posted from @id8labs
+- LinkedIn post from Eddie's profile
 
 ## Error Recovery
 
@@ -216,13 +216,13 @@ If the pipeline is interrupted at any point:
 ```
 Claude will check:
 1. Does the essay draft exist? (Skip Stage 1 if yes)
-2. Is the essay published at your-domain.com? (Skip Stage 2 if yes)
+2. Is the essay published at id8labs.app? (Skip Stage 2 if yes)
 3. Were social posts made? (Only post to missing platforms)
 
 ## Requirements
 
 - All sub-skills configured (/write-release, /publish-essay, /post-tweet, /post-linkedin)
-- Git access to your content repo
+- Git access to id8labs-hub repo
 - Comet browser running with debugging
-- Logged into X as @your-handle
-- Logged into LinkedIn as your profile
+- Logged into X as @id8labs
+- Logged into LinkedIn as Eddie Belaval

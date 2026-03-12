@@ -1,9 +1,29 @@
 ---
 name: omni-vu
 description: Screen capture, AI vision analysis, and GUI automation for macOS. Use when you need to see what's on screen, analyze UI state, detect changes, or automate mouse/keyboard actions.
----
+slug: omni-vu
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "omni-vu"
+  - "omni vu"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # omni.vu - Visual Understanding & Automation
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## Overview
 

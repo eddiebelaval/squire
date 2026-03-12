@@ -1,6 +1,6 @@
 # /visualize - Create Interactive Visual Explanation
 
-Generate an interactive HTML visualization to explain a concept, system, architecture, codebase structure, or workflow visually. Some concepts are better understood spatially and interactively than through walls of text.
+Generate an interactive HTML visualization to explain a concept, system, architecture, codebase structure, or workflow visually. Eddie learns best through spatial, interactive visuals — not walls of text.
 
 ## Instructions
 
@@ -276,6 +276,52 @@ in any diagram where understanding direction/movement matters.
 </svg>
 ```
 
+**Standardized SVG Node Components (Architecture Diagrams):**
+
+When building architecture/system diagrams, use these pre-defined node shapes for consistency
+across all artifacts. Each component is factory-themed and sized for readability.
+
+```
+/* NODE SHAPES — copy and position these in architecture SVGs */
+
+/* Service / API box — primary building block */
+<rect x="X" y="Y" width="160" height="52" rx="4" fill="var(--base-card)" stroke="var(--border-subtle)" stroke-width="1"/>
+<text x="X+80" y="Y+30" text-anchor="middle" fill="var(--text-primary)" font-family="var(--font-mono)" font-size="11">Service Name</text>
+
+/* Database cylinder */
+<ellipse cx="X+50" cy="Y" rx="50" ry="12" fill="var(--base-card)" stroke="var(--border-subtle)" stroke-width="1"/>
+<rect x="X" y="Y" width="100" height="48" fill="var(--base-card)" stroke="var(--border-subtle)" stroke-width="1"/>
+<ellipse cx="X+50" cy="Y+48" rx="50" ry="12" fill="var(--base-card)" stroke="var(--border-subtle)" stroke-width="1"/>
+<text x="X+50" y="Y+30" text-anchor="middle" fill="var(--text-secondary)" font-family="var(--font-mono)" font-size="10">DB_NAME</text>
+
+/* User / Actor circle */
+<circle cx="X" cy="Y" r="22" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+<text x="X" y="Y+4" text-anchor="middle" fill="var(--accent)" font-family="var(--font-mono)" font-size="9">USER</text>
+
+/* External service (dashed border = outside your control) */
+<rect x="X" y="Y" width="140" height="44" rx="4" fill="none" stroke="var(--text-muted)" stroke-width="1" stroke-dasharray="6 4"/>
+<text x="X+70" y="Y+26" text-anchor="middle" fill="var(--text-muted)" font-family="var(--font-mono)" font-size="10">External API</text>
+
+/* Queue / Message bus (rounded pill) */
+<rect x="X" y="Y" width="120" height="36" rx="18" fill="var(--base-card)" stroke="var(--amber)" stroke-width="1"/>
+<text x="X+60" y="Y+22" text-anchor="middle" fill="var(--amber)" font-family="var(--font-mono)" font-size="10">Queue</text>
+
+/* Cache (diamond / small rotated square) */
+<rect x="X" y="Y" width="36" height="36" rx="2" fill="var(--base-card)" stroke="var(--teal)" stroke-width="1" transform="rotate(45, X+18, Y+18)"/>
+<text x="X+18" y="Y+56" text-anchor="middle" fill="var(--teal)" font-family="var(--font-mono)" font-size="9">CACHE</text>
+
+/* Boundary group (section of the diagram) */
+<rect x="X" y="Y" width="W" height="H" rx="8" fill="none" stroke="var(--border-subtle)" stroke-width="1" stroke-dasharray="4 6"/>
+<text x="X+12" y="Y-8" fill="var(--text-muted)" font-family="var(--font-mono)" font-size="9" text-transform="uppercase" letter-spacing="1.5">BOUNDARY LABEL</text>
+```
+
+**Node color coding:**
+- Orange stroke (`--accent`): Your primary services, the things you built
+- Teal stroke (`--teal`): Caches, success paths, health indicators
+- Amber stroke (`--amber`): Queues, async processes, secondary systems
+- Muted stroke (`--text-muted`): External services, things outside your control
+- Subtle stroke (`--border-subtle`): Default/neutral components
+
 **What NOT to do:**
 - NO pure black (#000) or pure white (#fff) — always use near-black/near-white
 - NO gradients on backgrounds
@@ -302,6 +348,46 @@ Content area:
   - SENIOR DEV ASSESSMENT tab (MANDATORY — see below)
 ```
 
+#### Embedded Data Model (MANDATORY for updateability)
+
+Every visualization MUST embed its structured data as a JSON block in the HTML. This enables
+re-reading the artifact later (for updates, diffs, or cross-referencing) without parsing HTML.
+
+```html
+<!-- Place just before closing </body> tag -->
+<script type="application/json" id="artifact-data">
+{
+  "type": "visualize",
+  "topic": "homer-architecture",
+  "project": "homer",
+  "generated": "2026-02-10T03:00:00Z",
+  "sections": [
+    { "id": "overview", "title": "Overview", "type": "tab" },
+    { "id": "dataflow", "title": "Data Flow", "type": "tab" }
+  ],
+  "nodes": [
+    { "id": "n1", "label": "Dashboard", "type": "service", "section": "overview" },
+    { "id": "n2", "label": "Supabase", "type": "database", "section": "overview" }
+  ],
+  "edges": [
+    { "from": "n1", "to": "n2", "label": "REST API", "style": "flow" }
+  ],
+  "assessment": {
+    "wins": ["..."],
+    "fixes": [{ "id": "fix-1", "title": "...", "severity": "HIGH" }],
+    "next_steps": [{ "id": "next-1", "title": "...", "impact": "..." }]
+  }
+}
+</script>
+```
+
+**Rules:**
+- Schema is flexible per artifact — include whatever fields describe the content
+- `nodes` and `edges` arrays are REQUIRED for any artifact that contains diagrams
+- `assessment` object is REQUIRED (mirrors the Assessment tab content)
+- When Claude reads an artifact back (for `--update` or cross-referencing), parse this JSON FIRST — never parse the HTML structure
+- The `generated` timestamp lets you track artifact freshness
+
 #### Senior Dev Assessment Tab (MANDATORY)
 
 **Every visualization MUST include a final tab called "Assessment"** that acts as a senior developer code review of the system being visualized. This tab makes the entire document actionable — not just educational.
@@ -313,6 +399,7 @@ Cards listing architectural wins, good patterns, smart decisions. Be specific �
 
 **2. What Needs Fixing (red/amber accent)**
 Cards listing issues, anti-patterns, missing pieces, tech debt, or risks. Each card MUST include:
+- **Checkbox** — localStorage-persistent (see checkbox behavior below)
 - **Issue title** — clear, specific name
 - **Why it matters** — 1-2 sentences on impact/risk
 - **Severity badge** — CRITICAL / HIGH / MEDIUM / LOW
@@ -320,12 +407,156 @@ Cards listing issues, anti-patterns, missing pieces, tech debt, or risks. Each c
 
 **3. High-Impact Next Steps (orange accent)**
 Ordered list of the 3-5 highest-leverage items that would move the needle most. These are the "if you only do 3 things, do these" items. Each includes:
+- **Checkbox** — localStorage-persistent (see checkbox behavior below)
 - **What** — the action
 - **Why** — the expected impact
 - **Prompt block** — ready-to-paste Claude Code prompt
 
 **4. Prompts Summary (teal accent)**
-A clean, copy-paste-friendly list of ALL prompts from the assessment, numbered and labeled. This is the "action sheet" — the user can work through them top to bottom.
+A clean, copy-paste-friendly list of ALL prompts from the assessment, numbered and labeled. Each prompt row has a checkbox. This is the "action sheet" — Eddie can work through them top to bottom. Checking a prompt here also checks the corresponding item in sections 2/3, and vice versa (two-way sync).
+
+#### Assessment Checkbox Behavior (MANDATORY)
+
+Every actionable item in the assessment (fixes, next steps, summary prompts) gets a persistent checkbox. When checked, the item strikes through and grays out — signaling "done, move on."
+
+**HTML pattern for each assessment item:**
+```html
+<div class="assessment-item" id="assess-fix-1">
+  <label class="assessment-check">
+    <input type="checkbox" class="assess-checkbox" data-key="fix-1">
+    <span class="assess-label">Issue title here</span>
+  </label>
+  <div class="assess-body">
+    <span class="severity-badge medium">MEDIUM</span>
+    <p class="assess-desc">Why it matters — 1-2 sentences.</p>
+    <div class="prompt-block">
+      <button class="copy-btn">COPY</button>
+      <div class="prompt-text">The Claude Code prompt here...</div>
+    </div>
+  </div>
+</div>
+```
+
+**Completed state CSS:**
+```css
+/* Checked = strike-through + gray out */
+.assessment-item.completed .assess-label {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+.assessment-item.completed .assess-body {
+  opacity: 0.25;
+  pointer-events: none;   /* can't copy a prompt you've already used */
+}
+.assessment-item.completed .severity-badge {
+  opacity: 0.3;
+}
+/* Smooth transition so the fade feels intentional */
+.assess-body {
+  transition: opacity 0.3s ease;
+}
+.assess-label {
+  transition: color 0.3s ease;
+}
+```
+
+**Checkbox styling (same as blueprint):**
+```css
+.assess-checkbox {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid var(--border-visible);
+  border-radius: 3px;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+}
+.assess-checkbox:checked {
+  background: var(--teal);
+  border-color: var(--teal);
+}
+.assess-checkbox:checked::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 4px;
+  height: 8px;
+  border: solid #020202;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.assessment-check {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+```
+
+**localStorage persistence (MANDATORY):**
+```javascript
+// KEY: 'visualize-assess-{TOPIC_SLUG}' — unique per artifact
+var ASSESS_KEY = 'visualize-assess-' + document.title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+
+// Save on every checkbox change
+document.querySelectorAll('.assess-checkbox').forEach(function(cb) {
+  cb.addEventListener('change', function() {
+    var state = JSON.parse(localStorage.getItem(ASSESS_KEY) || '{}');
+    state[this.dataset.key] = this.checked;
+    localStorage.setItem(ASSESS_KEY, JSON.stringify(state));
+
+    // Toggle completed class on parent item
+    var item = this.closest('.assessment-item');
+    if (this.checked) {
+      item.classList.add('completed');
+    } else {
+      item.classList.remove('completed');
+    }
+
+    // Two-way sync: if this prompt exists in both a section card AND
+    // the summary list, keep them in sync
+    document.querySelectorAll('.assess-checkbox[data-key="' + this.dataset.key + '"]').forEach(function(sibling) {
+      if (sibling !== cb) {
+        sibling.checked = cb.checked;
+        var sibItem = sibling.closest('.assessment-item');
+        if (cb.checked) { sibItem.classList.add('completed'); }
+        else { sibItem.classList.remove('completed'); }
+      }
+    }.bind(this));
+
+    updateAssessProgress();
+  });
+});
+
+// Restore state on page load
+window.addEventListener('load', function() {
+  var state = JSON.parse(localStorage.getItem(ASSESS_KEY) || '{}');
+  Object.keys(state).forEach(function(key) {
+    document.querySelectorAll('.assess-checkbox[data-key="' + key + '"]').forEach(function(cb) {
+      cb.checked = state[key];
+      if (state[key]) cb.closest('.assessment-item').classList.add('completed');
+    });
+  });
+  updateAssessProgress();
+});
+
+// Optional: show "3 of 8 addressed" counter at top of Assessment tab
+function updateAssessProgress() {
+  var total = document.querySelectorAll('.assessment-item[id^="assess-fix-"], .assessment-item[id^="assess-next-"]').length;
+  var done = document.querySelectorAll('.assessment-item[id^="assess-fix-"].completed, .assessment-item[id^="assess-next-"].completed').length;
+  var counter = document.getElementById('assess-progress');
+  if (counter) {
+    counter.textContent = done + ' of ' + total + ' addressed';
+    counter.style.color = done === total ? 'var(--teal)' : 'var(--text-secondary)';
+  }
+}
+```
+
+**Progress counter at top of Assessment tab:**
+Include a small progress line below the tab header: `<span id="assess-progress" class="label">0 of N addressed</span>` — updates in real time as checkboxes are toggled. Turns teal when all items are addressed.
 
 **Prompt block styling:**
 ```css
@@ -362,8 +593,8 @@ A clean, copy-paste-friendly list of ALL prompts from the assessment, numbered a
 ```
 
 **Prompt writing rules:**
-- Write prompts as if the user is pasting them directly into Claude Code
-- Include the project context ("In the project at ~/path/to/project/...")
+- Write prompts as if Eddie is pasting them directly into Claude Code
+- Include the project context ("In the DeepStack dashboard at ~/clawd/projects/kalshi-trading/dashboard/...")
 - Reference specific files and what to change
 - Keep prompts focused — one fix per prompt, not a kitchen sink
 - Use imperative voice ("Add...", "Fix...", "Refactor...", "Create...")
@@ -381,9 +612,9 @@ copyBtn.addEventListener('click', function() {
 });
 ```
 
-**Example Assessment card with prompt:**
+**Example Assessment card with prompt (includes checkbox):**
 ```
-[MEDIUM severity badge]
+[CHECKBOX] [MEDIUM severity badge]
 Missing Input Validation on Config Fields
 
 The PATCH endpoint validates field names against configSchema but doesn't
@@ -391,13 +622,18 @@ validate number ranges at the DB level. A direct API call could bypass
 the UI's min/max constraints.
 
 [PROMPT BLOCK]
-In the project at ~/path/to/your-project/,
+In the DeepStack dashboard at ~/clawd/projects/kalshi-trading/dashboard/,
 add server-side min/max validation to the PATCH handler in
 app/api/strategies/[name]/config/route.ts. For each field in the
 overrides object, check the value against the corresponding configSchema
 entry's min and max. Return 400 with { error: "field_name out of range" }
 if validation fails. Run npm run build to verify after changes.
 [COPY button]
+
+--- When checkbox is checked: ---
+[CHECKED] [MEDIUM badge, faded]
+̶M̶i̶s̶s̶i̶n̶g̶ ̶I̶n̶p̶u̶t̶ ̶V̶a̶l̶i̶d̶a̶t̶i̶o̶n̶ (gray, struck-through)
+[Entire card body at 25% opacity, unclickable]
 ```
 
 ### Step 4: Save and open
@@ -405,9 +641,12 @@ if validation fails. Run npm run build to verify after changes.
 **ALWAYS save to the artifacts directory:** `~/Development/artifacts/<project>/<topic>.html`
 
 Route to the correct project subfolder:
-- Each project gets its own subfolder: `~/Development/artifacts/<project-name>/`
-- Cross-project or general artifacts: `~/Development/artifacts/_general/`
-- Create the subfolder with `mkdir -p` if it doesn't exist
+- **Homer** artifacts: `~/Development/artifacts/homer/`
+- **DeepStack/Kalshi** artifacts: `~/Development/artifacts/deepstack/`
+- **HYDRA** artifacts: `~/Development/artifacts/hydra/`
+- **Pause** artifacts: `~/Development/artifacts/pause/`
+- **id8labs** artifacts: `~/Development/artifacts/id8labs/`
+- **Cross-project / general** artifacts: `~/Development/artifacts/_general/`
 
 If a project folder doesn't exist yet, create it with `mkdir -p` before writing.
 
@@ -422,11 +661,11 @@ After opening, ask if any section needs more detail, different layout, or additi
 ## Usage Examples
 
 ```
-/visualize project architecture
+/visualize Homer architecture
 /visualize how Supabase RLS works
 /visualize the deployment pipeline
-/visualize our microservice boundaries
-/visualize difference between the auth flows
+/visualize HYDRA job structure
+/visualize difference between prep-templates and doc-templates
 /visualize my project status across all repos
 ```
 

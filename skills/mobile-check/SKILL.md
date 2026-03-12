@@ -1,4 +1,30 @@
+---
+name: Mobile Check
+slug: mobile-check
+description: Comprehensive front-to-back mobile verification using Playwright MCP. Tests at iPhone mini viewport (375x667) as the bas
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "mobile-check"
+  - "mobile check"
+tags:
+  - operations
+  - tool-factory-retrofitted
+---
+
 # /mobile-check - Mobile Readiness Verification
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 Comprehensive front-to-back mobile verification using Playwright MCP. Tests at iPhone mini viewport (375x667) as the baseline — if it works here, it works everywhere.
 

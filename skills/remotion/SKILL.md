@@ -3,7 +3,27 @@ name: remotion-best-practices
 description: Best practices for Remotion - Video creation in React
 metadata:
   tags: remotion, video, react, animation, composition
----
+slug: remotion
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "remotion"
+  - "remotion"
+tags:
+  - development
+  - tool-factory-retrofitted---
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## When to use
 

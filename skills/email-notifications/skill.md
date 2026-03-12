@@ -1,9 +1,29 @@
 ---
 name: email-notifications
 description: Expert guide for sending transactional emails, creating templates, scheduling notifications, and email best practices. Use when implementing email functionality, notifications, or campaigns.
----
+slug: email-notifications
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "email-notifications"
+  - "email notifications"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Email Notifications Skill
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## Overview
 

@@ -1,9 +1,29 @@
 ---
 name: senior-fullstack
 description: Comprehensive fullstack development skill for building complete web applications with React, Next.js, Node.js, GraphQL, and PostgreSQL. Includes project scaffolding, code quality analysis, architecture patterns, and complete tech stack guidance. Use when building new projects, analyzing code quality, implementing design patterns, or setting up development workflows.
----
+slug: senior-fullstack
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "senior-fullstack"
+  - "senior fullstack"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Senior Fullstack
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 Complete toolkit for senior fullstack with modern tools and best practices.
 

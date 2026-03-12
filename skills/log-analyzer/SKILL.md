@@ -1,9 +1,29 @@
 ---
 name: log-analyzer
 description: Expert guide for analyzing application logs including log searching, pattern detection, error tracking, and debugging. Use when investigating issues, tracking errors, or understanding application behavior.
----
+slug: log-analyzer
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "log-analyzer"
+  - "log analyzer"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Log Analyzer Skill
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## Overview
 

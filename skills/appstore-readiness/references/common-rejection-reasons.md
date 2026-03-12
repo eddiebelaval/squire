@@ -100,12 +100,13 @@ This document covers the most common App Store rejection reasons and how to prev
 | **Demo needs verification** | 2FA or email verification required | Disable for demo or provide all info |
 
 **Demo Account Best Practices:**
-```
-Username: demo@yourapp.com
-Password: AppReview2025!
-Notes: Full access, no 2FA required
-       If 2FA required, verification code: 123456
-```
+
+Provide in App Store Connect review notes:
+- A working email/username for the demo account
+- A password that won't expire during review
+- Note whether 2FA is required (disable if possible)
+- If 2FA is required, include the verification method
+- Ensure the account has full access to all features
 
 ---
 

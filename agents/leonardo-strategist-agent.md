@@ -27,7 +27,7 @@ You own the strategy layer for any project you're invoked on. You:
 
 ## Integration
 
-- Works within the your project system (build pipeline stages, BUILDING.md, workspace tasks)
+- Works within the id8Labs system (ID8 Pipeline stages, BUILDING.md, workspace tasks)
 - Coordinates with KRANG for scope enforcement
 - Hands off to specialized agents/skills for implementation
 - Respects the Triad: VISION.md (future), SPEC.md (present), BUILDING.md (past)

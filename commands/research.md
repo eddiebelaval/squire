@@ -1,8 +1,8 @@
 # /research — Research Lab Orchestrator
 
-You are the orchestrator for the Research Lab at `~/Development/research-lab/`.
+You are the orchestrator for the id8Labs Research Lab at `~/Development/id8/research-lab/`.
 
-The Research Lab is an autonomous, compounding research platform. It uses the multi-expert subagent pattern combined with a persistence-through-compression architecture. Nothing lives only in context — every intermediate result is saved to disk immediately.
+The Research Lab is an autonomous, compounding research platform. It uses the multi-expert subagent pattern (from `/parallax-assess`) combined with HYDRA's persistence-through-compression architecture. Nothing lives only in context — every intermediate result is saved to disk immediately.
 
 **Arguments:** `$ARGUMENTS`
 
@@ -42,9 +42,9 @@ When the user provides a thesis or question:
 
 Before creating the brief, cross-reference against the existing knowledge base:
 
-1. Read `~/Development/research-lab/knowledge/findings.md`
-2. Read `~/Development/research-lab/knowledge/open-questions.md`
-3. Read `~/Development/research-lab/knowledge/contradictions.md`
+1. Read `~/Development/id8/research-lab/knowledge/findings.md`
+2. Read `~/Development/id8/research-lab/knowledge/open-questions.md`
+3. Read `~/Development/id8/research-lab/knowledge/contradictions.md`
 
 Check for:
 - **Duplicates:** Is this thesis already captured by an existing finding? If so, tell the user: "This is covered by F-NNN. Did you mean to extend or challenge it? Try: `/research \"[refined thesis]\"`"
@@ -53,7 +53,7 @@ Check for:
 
 ### Brief Creation
 
-1. Count existing briefs in `~/Development/research-lab/queue/` to determine the next ID (NNN format, zero-padded)
+1. Count existing briefs in `~/Development/id8/research-lab/queue/` to determine the next ID (NNN format, zero-padded)
 2. Generate a slug from the thesis (lowercase, hyphens, max 40 chars)
 3. Read `modules/<active>/adversarial.md` and identify the 2-3 most relevant adversarial challenges
 4. Create `queue/NNN-slug.md` using this template:
@@ -434,8 +434,8 @@ This is the core pipeline. Every phase saves to disk before proceeding to the ne
 
 ### Phase 0: Setup
 
-1. Read `~/Development/research-lab/config.md` → get active module (or use --module override)
-2. Read `~/Development/research-lab/state/lab-state.json` → get last session ID
+1. Read `~/Development/id8/research-lab/config.md` → get active module (or use --module override)
+2. Read `~/Development/id8/research-lab/state/lab-state.json` → get last session ID
 3. Generate session ID: `YYYY-MM-DD-NNN` (date + incrementing counter)
 4. Create session directory: `sessions/<session-id>/`
 5. Pick the next brief:
@@ -460,7 +460,7 @@ Compile all of this into a context document and SAVE IT to `sessions/<session-id
 
 Read the active module's expert pool:
 - Default (research): `modules/research/experts.md`
-- Clinical: `modules/clinical/` (uses clinical-assess pool)
+- Clinical: `modules/clinical/` (uses parallax-assess pool)
 - Engineering: `modules/engineering/` (uses dev-assess pool)
 
 Also read `modules/<active>/adversarial.md` for the adversarial framework.
@@ -682,7 +682,7 @@ Given a session ID:
 
 ## COMPOUND Action
 
-This is the reflector pattern applied to research:
+This is the HYDRA reflector pattern applied to research:
 
 1. Read ALL entries in `knowledge/findings.md`
 2. Read ALL entries in `knowledge/contradictions.md`
@@ -1017,7 +1017,7 @@ Update `knowledge/convergence.md` with the new calculation and append to history
 
 ## Module System
 
-The active module determines which expert pool, rubric, schema, adversarial framework, and synthesis prompt are used. Modules live at `~/Development/research-lab/modules/<name>/`.
+The active module determines which expert pool, rubric, schema, adversarial framework, and synthesis prompt are used. Modules live at `~/Development/id8/research-lab/modules/<name>/`.
 
 Each module contains:
 - `experts.md` — The expert pool

@@ -1,7 +1,17 @@
 ---
 name: competitor-alternatives
 description: "When the user wants to create competitor comparison or alternative pages for SEO and sales enablement. Also use when the user mentions 'alternative page,' 'vs page,' 'competitor comparison,' 'comparison page,' '[Product] vs [Product],' '[Product] alternative,' or 'competitive landing pages.' Covers four formats: singular alternative, plural alternatives, you vs competitor, and competitor vs competitor. Emphasizes deep research, modular content architecture, and varied section types beyond feature tables."
----
+slug: competitor-alternatives
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "competitor-alternatives"
+  - "competitor alternatives"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Competitor & Alternative Pages
 
@@ -319,6 +329,16 @@ headquarters: San Francisco
 primary_use_case: "docs + light databases"
 target_audience: "teams wanting flexible workspace"
 market_position: "premium, feature-rich"
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 # Pricing
 pricing_model: per-seat

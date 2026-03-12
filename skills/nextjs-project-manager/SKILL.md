@@ -1,9 +1,29 @@
 ---
 name: nextjs-project-manager
 description: Expert guide for Next.js 14+ App Router projects. Use when building features, routing, server/client components, forms, layouts, or debugging Next.js-specific issues.
----
+slug: nextjs-project-manager
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "nextjs-project-manager"
+  - "nextjs project manager"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Next.js Project Manager Skill
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## Overview
 

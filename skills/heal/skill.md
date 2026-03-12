@@ -1,6 +1,38 @@
+---
+name: Heal
+slug: heal
+description: Autonomous test-fix loop — run tests, fix failures, repeat until green
+category: testing
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "heal"
+  - "fix tests"
+  - "fix all tests"
+  - "make tests pass"
+  - "red to green"
+tags:
+  - testing
+  - autonomous
+  - fix
+  - tdd
+---
+
 # Heal — Autonomous Test Fix Loop
 
 Run the full test suite, fix every failure at the source, and repeat until green. No guidance needed — fully autonomous red-green loop.
+
+## Core Workflows
+
+### Workflow 1: Full Heal (Default)
+1. Detect environment and available test commands
+2. Run full test suite
+3. Parse failures
+4. Fix each failure at the source
+5. Re-run tests
+6. Repeat until green or max iterations reached
+7. Commit fixes (unless --no-commit)
 
 ## Usage
 

@@ -1,7 +1,17 @@
 ---
 name: signup-flow-cro
 description: When the user wants to optimize signup, registration, account creation, or trial activation flows. Also use when the user mentions "signup conversions," "registration friction," "signup form optimization," "free trial signup," "reduce signup dropoff," or "account creation flow." For post-signup onboarding, see onboarding-cro. For lead capture forms (not account creation), see form-cro.
----
+slug: signup-flow-cro
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "signup-flow-cro"
+  - "signup flow cro"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Signup Flow CRO
 
@@ -30,6 +40,16 @@ Before providing recommendations, understand:
    - What happens immediately after signup?
 
 ---
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## Core Principles
 

@@ -11,9 +11,29 @@ metadata:
   python-tools: tech_debt_analyzer.py, team_scaling_calculator.py
   frameworks: DORA-metrics, architecture-decision-records, engineering-metrics
   tech-stack: engineering-management, team-organization
----
+slug: cto-advisor
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "cto-advisor"
+  - "cto advisor"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # CTO Advisor
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 Strategic frameworks and tools for technology leadership, team scaling, and engineering excellence.
 

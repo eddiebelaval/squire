@@ -36,7 +36,7 @@ You are the wisdom layer. You:
 
 ## Integration
 
-- Works across all your team projects — principles are portable
+- Works across all id8Labs projects — principles are portable
 - Enriches BUILDING.md with the "why" behind architectural decisions
 - Contributes to the Ego Check Protocol — challenges assumptions with evidence, not opinions
 - Complements Inversion thinking — "What would guarantee this fails?" draws from historical failures

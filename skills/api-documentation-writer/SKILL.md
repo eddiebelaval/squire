@@ -1,7 +1,17 @@
 ---
 name: api-documentation-writer
 description: Expert guide for writing comprehensive API documentation including OpenAPI specs, endpoint references, authentication guides, and code examples. Use when documenting APIs, creating developer portals, or improving API discoverability.
----
+slug: api-documentation-writer
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "api-documentation-writer"
+  - "api documentation writer"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # API Documentation Writer Skill
 
@@ -704,6 +714,16 @@ x-tagGroups:
     tags:
       - Webhooks
       - Health
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 x-logo:
   url: 'https://example.com/logo.png'

@@ -1,7 +1,17 @@
 ---
 name: obsidian-markdown
 description: Create and edit Obsidian Flavored Markdown with wikilinks, embeds, callouts, properties, and other Obsidian-specific syntax. Use when working with .md files in Obsidian, or when the user mentions wikilinks, callouts, frontmatter, tags, embeds, or Obsidian notes.
----
+slug: obsidian-markdown
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "obsidian-markdown"
+  - "obsidian markdown"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Obsidian Flavored Markdown Skill
 
@@ -554,6 +564,16 @@ priority: high
 ---
 
 # Project Alpha
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## Overview
 

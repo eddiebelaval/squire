@@ -1,7 +1,17 @@
 ---
 name: programmatic-seo
 description: When the user wants to create SEO-driven pages at scale using templates and data. Also use when the user mentions "programmatic SEO," "template pages," "pages at scale," "directory pages," "location pages," "[keyword] + [city] pages," "comparison pages," "integration pages," or "building many pages for SEO." For auditing existing SEO issues, see seo-audit.
----
+slug: programmatic-seo
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "programmatic-seo"
+  - "programmatic seo"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Programmatic SEO
 
@@ -27,6 +37,16 @@ Before designing a programmatic SEO strategy, understand:
    - What would it take to beat them?
 
 ---
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## Core Principles
 

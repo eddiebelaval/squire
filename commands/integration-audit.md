@@ -7,7 +7,7 @@ Perform a comprehensive audit of all features, checking whether each feature is 
 `/integration-audit [project-path]` where project-path is optional:
 - No argument: audit the current working directory
 - A directory path: audit that project specifically
-- Example: `/integration-audit ~/Development/my-project`
+- Example: `/integration-audit ~/Development/Homer`
 
 ## How This Differs From /audit
 

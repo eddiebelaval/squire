@@ -1,9 +1,29 @@
 ---
 name: obsidian-bases
 description: Create and edit Obsidian Bases (.base files) with views, filters, formulas, and summaries. Use when working with .base files, creating database-like views of notes, or when the user mentions Bases, table views, card views, filters, or formulas in Obsidian.
----
+slug: obsidian-bases
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "obsidian-bases"
+  - "obsidian bases"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Obsidian Bases Skill
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 This skill enables skills-compatible agents to create and edit valid Obsidian Bases (`.base` files) including views, filters, formulas, and all related configurations.
 

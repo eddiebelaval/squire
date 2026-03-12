@@ -1,9 +1,29 @@
 ---
 name: ui-builder
 description: Expert guide for building beautiful, responsive UI with React, Tailwind CSS, Shadcn/ui, and modern design patterns. Use when creating components, layouts, animations, or styling.
----
+slug: ui-builder
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "ui-builder"
+  - "ui builder"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # UI/UX Builder Skill
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## Overview
 

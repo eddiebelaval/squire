@@ -261,8 +261,9 @@ Plan SVG node positions on a grid:
 ## Examples
 
 ```
-/codebase-map my-app
-/codebase-map api-service
+/codebase-map homer
+/codebase-map parallax
+/codebase-map rune
 /codebase-map          # Infers from current directory
 ```
 

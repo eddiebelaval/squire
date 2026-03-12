@@ -1,7 +1,17 @@
 ---
 name: paywall-upgrade-cro
 description: When the user wants to create or optimize in-app paywalls, upgrade screens, upsell modals, or feature gates. Also use when the user mentions "paywall," "upgrade screen," "upgrade modal," "upsell," "feature gate," "convert free to paid," "freemium conversion," "trial expiration screen," "limit reached screen," "plan upgrade prompt," or "in-app pricing." Distinct from public pricing pages (see page-cro) — this skill focuses on in-product upgrade moments where the user has already experienced value.
----
+slug: paywall-upgrade-cro
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "paywall-upgrade-cro"
+  - "paywall upgrade cro"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Paywall and Upgrade Screen CRO
 
@@ -30,6 +40,16 @@ Before providing recommendations, understand:
    - What are they trying to do when blocked?
 
 ---
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## Core Principles
 

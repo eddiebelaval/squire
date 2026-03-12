@@ -20,7 +20,7 @@ Determine what's being assessed. This could be:
 ### Phase 2: Gather Context
 
 1. Read all relevant files for the target
-2. Identify the project and directory (e.g., `~/projects/my-app`)
+2. Identify the project and directory (e.g., `~/Development/id8/products/parallax`)
 3. Build a context summary that includes:
    - What the target does / is supposed to do
    - Key files and their locations
@@ -221,8 +221,8 @@ Report to the user:
 
 ```
 /dev-assess shadow-engine
-/dev-assess my-app auth flow
-/dev-assess dashboard architecture
+/dev-assess parallax auth flow
+/dev-assess homer dashboard architecture
 /dev-assess billing-system
 ```
 

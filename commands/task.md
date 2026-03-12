@@ -37,7 +37,7 @@ Based on the title/description the user already gave, ask follow-up questions na
 ## Example Conversation
 
 ```
-User: /task Add email notifications for new leads
+User: /task Add email notifications for Homer
 
 Claude: [AskUserQuestion: Priority? Type?]
 
@@ -49,7 +49,7 @@ User: Agents should get an email when a new lead comes in and when an amendment 
 
 Claude: Makes sense. Any thoughts on implementation — Resend, specific templates?
 
-User: Yeah use Resend, we already have it set up with notifications@myapp.com
+User: Yeah use Resend, we already have it set up with notifications@id8labs.tech
 
 Claude: [Creates file, fills in all sections, shows summary]
 ```

@@ -1,7 +1,17 @@
 ---
 name: marketing-ideas
 description: "When the user needs marketing ideas, inspiration, or strategies for their SaaS or software product. Also use when the user asks for 'marketing ideas,' 'growth ideas,' 'how to market,' 'marketing strategies,' 'marketing tactics,' 'ways to promote,' or 'ideas to grow.' This skill provides 140 proven marketing approaches organized by category."
----
+slug: marketing-ideas
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "marketing-ideas"
+  - "marketing ideas"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Marketing Ideas for SaaS
 
@@ -16,6 +26,16 @@ When asked for marketing ideas:
 4. Consider their resources (time, budget, team size)
 
 ---
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## The 140 Marketing Ideas
 

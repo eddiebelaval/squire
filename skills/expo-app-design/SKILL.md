@@ -26,6 +26,16 @@ tags:
 
 # Expo App Design
 
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
+
 Build robust, productivity apps with Expo. This skill covers the complete guide for building beautiful apps with Expo Router including fundamentals, styling, components, navigation, animations, patterns, and native tabs.
 
 ## References

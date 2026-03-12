@@ -1,7 +1,17 @@
 ---
 name: form-cro
 description: When the user wants to optimize any form that is NOT signup/registration — including lead capture forms, contact forms, demo request forms, application forms, survey forms, or checkout forms. Also use when the user mentions "form optimization," "lead form conversions," "form friction," "form fields," "form completion rate," or "contact form." For signup/registration forms, see signup-flow-cro. For popups containing forms, see popup-cro.
----
+slug: form-cro
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "form-cro"
+  - "form cro"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Form CRO
 
@@ -32,6 +42,16 @@ Before providing recommendations, identify:
    - Are there compliance/legal requirements?
 
 ---
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## Core Principles
 

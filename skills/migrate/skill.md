@@ -1,11 +1,37 @@
+---
+name: Migrate
+slug: migrate
+description: Execute a multi-step infrastructure migration with rollback safety, automatic config updates, full verification, and det
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "migrate"
+  - "migrate"
+tags:
+  - operations
+  - tool-factory-retrofitted
+---
+
 # Migrate — Autonomous Infrastructure Migration Pipeline
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 Execute a multi-step infrastructure migration with rollback safety, automatic config updates, full verification, and detailed logging. No confirmation prompts — runs end-to-end and reports results.
 
 ## Usage
 
 ```
-/migrate "Move auth schema from Supabase project staging-db to production-db"
+/migrate "Move auth schema from Supabase project homer-dev to homer-prod"
 /migrate "Consolidate two Supabase projects into one, update all .env files"
 /migrate "Switch from Redis Cloud to Upstash, update all connection strings"
 /migrate "Move from Vercel Postgres to Supabase, migrate schema and data"

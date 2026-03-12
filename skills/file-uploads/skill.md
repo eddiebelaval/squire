@@ -1,9 +1,29 @@
 ---
 name: file-uploads
 description: Expert guide for handling file uploads, image optimization, cloud storage (Supabase, S3, Cloudinary), and file management. Use when implementing file upload features or managing user assets.
----
+slug: file-uploads
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "file-uploads"
+  - "file uploads"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # File Uploads Skill
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## Overview
 

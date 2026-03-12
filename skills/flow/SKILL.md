@@ -24,6 +24,16 @@ tags:
 
 # Flow Discovery
 
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
+
 Interactive interview system that maps user flows BEFORE building features. This skill enforces the rule: **no feature gets built without a signed-off flow spec.**
 
 Two modes serve two pipeline stages:

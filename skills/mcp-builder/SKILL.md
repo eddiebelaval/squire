@@ -2,7 +2,17 @@
 name: mcp-builder
 description: Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK).
 license: Complete terms in LICENSE.txt
----
+slug: mcp-builder
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "mcp-builder"
+  - "mcp builder"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # MCP Server Development Guide
 
@@ -13,6 +23,16 @@ To create high-quality MCP (Model Context Protocol) servers that enable LLMs to 
 ---
 
 # Process
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## 🚀 High-Level Workflow
 

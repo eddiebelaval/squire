@@ -15,7 +15,16 @@ allowed-tools:
   - Grep
   - Glob
   - AskUserQuestion
----
+slug: humanizer
+category: operations
+complexity: complex
+author: "id8Labs"
+triggers:
+  - "humanizer"
+  - "humanizer"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Humanizer: Remove AI Writing Patterns
 
@@ -33,6 +42,16 @@ When given text to humanize:
 6. **Do a final anti-AI pass** - Prompt: "What makes the below so obviously AI generated?" Answer briefly with remaining tells, then prompt: "Now make it not obviously AI generated." and revise
 
 ---
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## PERSONALITY AND SOUL
 

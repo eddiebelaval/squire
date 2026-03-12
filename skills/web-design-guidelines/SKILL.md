@@ -5,9 +5,29 @@ metadata:
   author: vercel
   version: "1.0.0"
   argument-hint: <file-or-pattern>
----
+slug: web-design-guidelines
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "web-design-guidelines"
+  - "web design guidelines"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Web Interface Guidelines
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 Review files for compliance with Web Interface Guidelines.
 

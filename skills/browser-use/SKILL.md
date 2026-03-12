@@ -1,10 +1,47 @@
 ---
-name: browser-use
+name: Browser Use
+slug: browser-use
 description: Automates browser interactions for web testing, form filling, screenshots, and data extraction. Use when the user needs to navigate websites, interact with web pages, fill forms, take screenshots, or extract information from web pages.
+category: automation
+complexity: moderate
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "browser use"
+  - "browser automation"
+  - "web screenshot"
+  - "fill form"
+  - "scrape page"
+  - "navigate to"
+tags:
+  - browser
+  - automation
+  - testing
+  - scraping
 allowed-tools: Bash(browser-use:*)
 ---
 
 # Browser Automation with browser-use CLI
+
+## Core Workflows
+
+### Workflow 1: Page Interaction
+1. Navigate to URL with `browser-use open`
+2. Inspect elements with `browser-use state`
+3. Interact using element indices (click, type, select)
+4. Verify result with state or screenshot
+
+### Workflow 2: Form Filling
+1. Open target page
+2. Get element indices via state
+3. Fill each field using `browser-use input`
+4. Submit and verify success
+
+### Workflow 3: Data Extraction
+1. Navigate to data source
+2. Use Python session for complex extraction
+3. Scroll through paginated content
+4. Export results
 
 The `browser-use` command provides fast, persistent browser automation. It maintains browser sessions across commands, enabling complex multi-step workflows.
 

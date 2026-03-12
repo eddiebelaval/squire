@@ -6,7 +6,17 @@ context: fork
 agent: Explore
 disable-model-invocation: true
 allowed-tools: Bash, Read, Write, AskUserQuestion, WebSearch
----
+slug: last30days
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "last30days"
+  - "last30days"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # last30days: Research Any Topic from the Last 30 Days
 
@@ -66,6 +76,16 @@ If the user wants to add API keys for better results:
 mkdir -p ~/.config/last30days
 cat > ~/.config/last30days/.env << 'ENVEOF'
 # last30days API Configuration
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
+
 # Both keys are optional - skill works with WebSearch fallback
 
 # For Reddit research (uses OpenAI's web_search tool)

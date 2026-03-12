@@ -1,7 +1,17 @@
 ---
 name: popup-cro
 description: When the user wants to create or optimize popups, modals, overlays, slide-ins, or banners for conversion purposes. Also use when the user mentions "exit intent," "popup conversions," "modal optimization," "lead capture popup," "email popup," "announcement banner," or "overlay." For forms outside of popups, see form-cro. For general page conversion optimization, see page-cro.
----
+slug: popup-cro
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "popup-cro"
+  - "popup cro"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Popup CRO
 
@@ -32,6 +42,16 @@ Before providing recommendations, understand:
    - Page types where shown
 
 ---
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## Core Principles
 

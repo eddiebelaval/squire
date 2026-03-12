@@ -1,9 +1,29 @@
 ---
 name: state-management
 description: Expert guide for React state management with Zustand, Context, and modern patterns. Use when managing global state, forms, complex UI state, or optimizing re-renders.
----
+slug: state-management
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "state-management"
+  - "state management"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # State Management Skill
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## Overview
 

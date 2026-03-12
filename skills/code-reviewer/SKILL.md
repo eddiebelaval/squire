@@ -1,9 +1,29 @@
 ---
 name: code-reviewer
 description: Comprehensive code review skill for TypeScript, JavaScript, Python, Swift, Kotlin, Go. Includes automated code analysis, best practice checking, security scanning, and review checklist generation. Use when reviewing pull requests, providing code feedback, identifying issues, or ensuring code quality standards.
----
+slug: code-reviewer
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "code-reviewer"
+  - "code reviewer"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Code Reviewer
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 Complete toolkit for code reviewer with modern tools and best practices.
 

@@ -1,7 +1,17 @@
 ---
 name: ab-test-setup
 description: When the user wants to plan, design, or implement an A/B test or experiment. Also use when the user mentions "A/B test," "split test," "experiment," "test this change," "variant copy," "multivariate test," or "hypothesis." For tracking implementation, see analytics-tracking.
----
+slug: ab-test-setup
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "ab-test-setup"
+  - "ab test setup"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # A/B Test Setup
 
@@ -431,6 +441,16 @@ Learnings:
 
 ```
 # A/B Test: [Name]
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## Hypothesis
 [Full hypothesis using framework]

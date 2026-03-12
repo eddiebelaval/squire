@@ -1,7 +1,17 @@
 ---
 name: appstore-readiness
 description: Expert iOS App Store submission and approval system. 9 specialized agents providing senior App Review Team-level expertise across compliance, design, privacy, monetization, metadata, technical requirements, timing, rejection recovery, and learning. Triggers on keywords like app store, iOS submission, apple review, app rejection, aso, privacy manifest, privacy labels, ATT, iap, in-app purchase, subscription, storekit, review guidelines, HIG, testflight, app store connect.
----
+slug: appstore-readiness
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "appstore-readiness"
+  - "appstore readiness"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # iOS App Store Readiness Skill
 
@@ -36,6 +46,16 @@ mentor: explain why Apple requires X
 ```
 
 ---
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## REVIEWER — Compliance Auditor
 

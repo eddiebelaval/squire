@@ -1,9 +1,29 @@
 ---
 name: performance-optimization
 description: Expert guide for optimizing Next.js performance - images, fonts, code splitting, caching, and Core Web Vitals. Use when improving load times or debugging performance issues.
----
+slug: performance-optimization
+category: operations
+complexity: complex
+version: "1.0.0"
+author: "id8Labs"
+triggers:
+  - "performance-optimization"
+  - "performance optimization"
+tags:
+  - development
+  - tool-factory-retrofitted---
 
 # Performance Optimization Skill
+
+
+## Core Workflows
+
+### Workflow 1: Primary Action
+1. Analyze the input and context
+2. Validate prerequisites are met
+3. Execute the core operation
+4. Verify the output meets expectations
+5. Report results
 
 ## Overview
 

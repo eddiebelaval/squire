@@ -47,7 +47,7 @@ User: /adr Use Supabase RLS instead of API middleware for auth
 
 Claude: Which project is this for?
 
-User: My SaaS app
+User: Homer
 
 Claude: What led to this decision? What's the current auth setup?
 
