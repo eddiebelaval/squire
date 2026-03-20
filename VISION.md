@@ -1,7 +1,7 @@
 ---
 last-evolved: 2026-03-18
 confidence: HIGH
-distance: 15%
+distance: 10%
 pillars: "6 (5R realized, 1P partial, 0U unrealized)"
 ---
 
@@ -39,9 +39,9 @@ The flagship artifact. Nine behavioral rules derived from analyzing 3,307 commit
 
 11-stage build system from Concept Lock to Listen & Iterate. Each stage has a gate question that must be answered before advancing, plus agent-native additions for AI-assisted development. The pipeline enforces discipline without slowing momentum.
 
-### 6. **Community & Distribution** -- PARTIAL (30%)
+### 6. **Community & Distribution** -- PARTIAL (55%)
 
-Published on GitHub with an MIT license, interactive installer, and comprehensive README. Community engagement remains limited: no Discord, no contributor guidelines, no external adoption metrics beyond GitHub stars.
+Published on GitHub with an MIT license, interactive installer, and comprehensive README. Contributor guidelines (`CONTRIBUTING.md`), GitHub issue templates (bug report, feature request, skill submission), and a PR template are now in place. Remaining gaps: no Discord or community forum, no external adoption metrics beyond GitHub stars, no formal governance body.
 
 ## User Truth
 
@@ -94,3 +94,4 @@ Build feedback loops. Contributor guidelines, issue templates, community-submitt
 |------|-------------|--------|---------|
 | 2026-03-18 | Initial VISION written | Squire published to GitHub, all components complete | All |
 | 2026-03-20 | Upgraded to v2 format | Triad template standardization across portfolio | Format |
+| 2026-03-20 | Community & Distribution 30% -> 55% | Added CONTRIBUTING.md, issue templates, PR template | Pillar 6 |

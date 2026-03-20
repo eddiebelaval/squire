@@ -2,7 +2,7 @@
 
 > How the most complete Claude Code toolkit was built, one friction pattern at a time.
 
-Last updated: 2026-03-18
+Last updated: 2026-03-20
 
 ---
 
@@ -58,6 +58,17 @@ The 11-stage build system was derived from shipping 12+ products through the sam
 | Skills built | 328 |
 | Slash commands | 63 |
 | Custom agents | 34 |
+
+## Community Infrastructure (Mar 2026)
+
+The Community & Distribution pillar was at 30% -- GitHub publication, MIT license, installer, and README were done, but nothing existed to help external contributors participate. This heal session added:
+
+- **CONTRIBUTING.md** -- What we accept (skills, commands, agents, rules, bug fixes, docs), what we do not accept (runtime dependencies, model-specific tricks, server requirements), how to contribute (issue first, fork and branch, follow patterns, test, PR), and contribution standards (grounded in usage, no over-engineering, bash 3.2+ compatibility).
+- **Issue templates** -- Bug report, feature request, and skill submission templates in `.github/ISSUE_TEMPLATE/`. Each template captures the information needed for triage without requiring back-and-forth.
+- **PR template** -- `.github/PULL_REQUEST_TEMPLATE.md` with summary, related issue, type of change, testing description, and checklist.
+- **Triad updates** -- SPEC.md gained a Community Infrastructure capability section (section 10) and verification checks. VISION.md pillar 6 advanced from 30% to 55%.
+
+Remaining gaps for full realization: Discord or community forum, external adoption metrics beyond GitHub stars, formal governance body.
 
 ## Migration from claude-code-visualize
 
